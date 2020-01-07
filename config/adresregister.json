@@ -1,0 +1,24 @@
+  [
+    {
+      "name": "adressenregister",
+      "type": "ap",
+      "eap": "OSLO-Adresregister-AP.eap",
+      "diagram": "OSLO-Adresregister",
+      "template": "adresregister-ap.j2",
+      "title": "Adressenregister",
+      "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+      "publication-date": "niet-bepaald",
+      "contributors-file": "stakeholders.csv",
+      "contributors-column": "Adres",
+      "site": "site-skeleton/adressenregister",
+      "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
+      "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-adresregister/applicatieprofiel-adresregister.html",
+      "dependencies": [
+        {
+          "package": "OSLO-Generiek",
+          "packagelabel": "Appplicatieprofiel Generiek-basis",
+          "packageurl": "https://otl-test.data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpdocument/07-02-2018/"
+        }
+      ]
+    }
+  ]

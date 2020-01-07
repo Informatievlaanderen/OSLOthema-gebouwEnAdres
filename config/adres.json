@@ -1,0 +1,17 @@
+[
+  {
+    "name": "adres",
+    "type": "voc",
+    "eap": "OSLO-Adres-VOC.eap",
+    "diagram": "OSLO-Adres",
+    "template": "adres-voc.j2",
+    "title": "Adres",
+    "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/Standaard",
+    "publication-date": "2018-07-03",
+    "contributors-file": "stakeholders.csv",
+    "contributors-column": "Adres",
+    "site": "site-skeleton/adres",
+    "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/erkende-standaarden/vocabularium-adres/vocabularium-adres.html"
+  }
+]

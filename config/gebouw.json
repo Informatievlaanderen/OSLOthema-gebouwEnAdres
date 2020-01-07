@@ -1,0 +1,17 @@
+[
+  {
+    "name": "gebouw",
+    "type": "voc",
+    "eap": "OSLO-Gebouw-VOC.eap",
+    "diagram": "OSLO-Gebouw",
+    "template": "gebouw-voc.j2",
+    "title": "Gebouw",
+    "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+    "publication-date": "niet-bepaald",
+    "contributors-file": "stakeholders.csv",
+    "contributors-column": "Gebouw",
+    "site": "site-skeleton/gebouw",
+    "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden"
+  }
+]
