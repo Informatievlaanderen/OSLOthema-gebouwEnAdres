@@ -6,6 +6,7 @@
     "diagram": "OSLO-Gebouw_applicatieprofiel_gebouwregister",
     "template": "gebouwenregister-ap.j2",
     "title": "Gebouwenregister",
+    "license" : "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "publication-date": "niet-bepaald",
     "contributors-file": "stakeholders.csv",
