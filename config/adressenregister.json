@@ -6,6 +6,7 @@
       "diagram": "OSLO-Adresregister",
       "template": "adresregister-ap.j2",
       "title": "Adressenregister",
+      "license" : "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
       "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
       "publication-date": "niet-bepaald",
       "contributors-file": "stakeholders.csv",
