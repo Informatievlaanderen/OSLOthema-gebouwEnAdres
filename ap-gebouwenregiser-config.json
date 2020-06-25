@@ -1,0 +1,28 @@
+{
+  "naam": "Applicatieprofiel Gebouwenregister",
+  "verantwoordelijke_organisatie": "Agentschap Informatie Vlaanderen",
+  "identificator_organisatie": "https://data.vlaanderen.be/doc/organisatie/OVO002949",
+  "publicatiedatum": "2018-11-08",
+  "type_toepassing": "Aanbevolen (vrijwillig)",
+  "categorie": "Vocabularium & applicatieprofielen",
+  "specificatiedocument": [
+    {
+      "naam": "Applicatieprofiel Gebouwenregister",
+      "waarde": "https://test.data.vlaanderen.be/doc/applicatieprofiel/gebouwenregister/"
+    }
+  ],
+  "documentatie": [],
+  "charter": [],
+  "verslagen": [
+    {
+      "naam": "Thematische werkgroep Adres en Gebouw 1 - 2016-06-08",
+      "waarde": "Thematische Werkgroep Adres & Gebouw 1.docx"
+    }
+  ],
+  "presentaties": [],
+  "functioneel_toepassingsgebied": "Semantische standaard voor het bouwen van een gebouwenregister.",
+  "organisatorisch_werkingsgebied": "alle entiteiten van de Vlaamse overheid",
+  "datum_van_aanmelding": "10 April 2018 (retroactief)",
+  "erkenning_werkgroep_datastandaarden": "8 november 2018 (Kandidaat-standaard)",
+  "erkenning_stuurgroep": "TBD"
+}
