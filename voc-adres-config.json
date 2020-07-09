@@ -5,6 +5,7 @@
   "publicatiedatum": "2018-07-03",
   "type_toepassing": "Aanbevolen (vrijwillig)",
   "categorie": "Vocabularium & applicatieprofielen",
+  "description_file" : "voc-adres.md",
   "specificatiedocument": [
     {
       "naam": "Vocabularium Adres",

@@ -5,6 +5,7 @@
   "publicatiedatum": "TBD",
   "type_toepassing": "Aanbevolen (vrijwillig)",
   "categorie": "Vocabularium & applicatieprofielen",
+  "description_file" : "ap-adresregister.md",
   "specificatiedocument": [
     {
       "naam": "Applicatieprofiel Adresregister",

@@ -5,6 +5,7 @@
   "publicatiedatum": "2018-11-08",
   "type_toepassing": "Aanbevolen (vrijwillig)",
   "categorie": "Vocabularium & applicatieprofielen",
+  "description_file" : "voc-gebouw.md",
   "specificatiedocument": [
     {
       "naam": "Vocabularium Gebouw",
