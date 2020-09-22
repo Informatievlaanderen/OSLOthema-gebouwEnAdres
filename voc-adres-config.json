@@ -1,11 +1,12 @@
 {
   "naam": "Vocabularium Adres",
+  "rapport" : "https://raw.githubusercontent.com/Informatievlaanderen/OSLO-Generated/test/report/doc/vocabularium/adres/ontwerpdocument/2020-01-06/adres.jsonld",
   "verantwoordelijke_organisatie": "Agentschap Informatie Vlaanderen",
   "identificator_organisatie": "https://data.vlaanderen.be/doc/organisatie/OVO002949",
   "publicatiedatum": "2018-07-03",
   "type_toepassing": "Aanbevolen (vrijwillig)",
   "categorie": "Vocabularium & applicatieprofielen",
-  "description_file" : "voc-adres.md",
+  "beschrijving" : "voc-adres.md",
   "specificatiedocument": [
     {
       "naam": "Vocabularium Adres",
