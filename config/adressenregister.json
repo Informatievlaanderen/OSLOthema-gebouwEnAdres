@@ -3,22 +3,22 @@
       "name": "adressenregister",
       "type": "ap",
       "eap": "OSLO-Adresregister-AP.eap",
-      "diagram": "OSLO-Adresregister",
+      "diagram": "OSLO-Adresregister-impl",
       "template": "adresregister-ap.j2",
       "title": "Adressenregister",
       "license" : "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
-      "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+      "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
       "publication-date": "2021-11-31",
       "contributors-file": "stakeholders.csv",
       "contributors-column": "Adres",
       "site": "site-skeleton/adressenregister",
-      "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
+      "feedbackurl": "https://github.com/informatievlaanderen/OSLOthema-gebouwEnAdres/issues",
       "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-adresregister/applicatieprofiel-adresregister.html",
       "dependencies": [
         {
           "package": "OSLO-Generiek",
           "packagelabel": "Appplicatieprofiel Generiek-basis",
-          "packageurl": "https://otl-test.data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpdocument/07-02-2018/"
+          "packageurl": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpdocument/07-02-2018/"
         }
       ]
     }
