@@ -17,7 +17,6 @@
     },
     "PostInfo": "https://data.vlaanderen.be/ns/adres#Postinfo",
     "postInfoStatus": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Postinfo.status",
       "@type": "@id",
       "@context": {
         "@base": "https://data.vlaanderen.be/id/concept/postinfostatus/"
