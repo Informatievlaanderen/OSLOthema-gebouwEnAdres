@@ -26,7 +26,7 @@ jobs:
           at: /tmp/workspace
       - add_ssh_keys:
           fingerprints:
-            - "cb:25:97:b6:bd:cd:4d:ac:8c:c6:63:9b:b9:d7:75:46"
+            - "6c:d8:66:90:0e:0a:58:7b:ff:c2:4a:34:e2:21:4d:a3"
       - run:
           name: Checkout target repo
           workdir: /tmp
