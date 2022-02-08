@@ -38,7 +38,7 @@ jobs:
           workdir: /tmp/OSLO-codelistgenerated
           command: |
             git fetch origin
-            git checkout -b "gebouwEnAdres-${CIRCLE_BRANCH}" --track "origin/gebouwEnAdres-${CIRCLE_BRANCH}"
+            git checkout -b "gebouwEnAdres-${CIRCLE_BRANCH}" --track "origin/gebouwEnAdres-${CIRCLE_BRANCH}" || git checkout "gebouwEnAdres-${CIRCLE_BRANCH}"
       - run:
           name: Copy assets
           workdir: /tmp/workspace
