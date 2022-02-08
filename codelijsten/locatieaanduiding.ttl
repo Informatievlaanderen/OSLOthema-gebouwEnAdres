@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+<https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding>
+    a skos:ConceptScheme ;
+    skos:prefLabel "conceptscheme locatieaanduiding";
+    skos:definition "Codelijst met locatieaanduidingen." .
+
+<https://data.vlaanderen.be/id/concept/locatieaanduiding/deur>
+    a skos:Concept ;
+    skos:definition "Aanduiding van een toegangsdeur tot een gebouweenheid." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> ;
+    
+    skos:prefLabel "deur" ;
+    skos:relatedMatch <https://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue/unitIdentifier> ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> .
+
+<https://data.vlaanderen.be/id/concept/locatieaanduiding/trap>
+    a skos:Concept ;
+    skos:definition "Aanduiding van een trap, normaliter binnen een gebouw." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> ;
+    
+    skos:prefLabel "trap" ;
+    skos:relatedMatch <https://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue/staircaseIdentifier> ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> .
+
+<https://data.vlaanderen.be/id/concept/locatieaanduiding/verdieping>
+    a skos:Concept ;
+    skos:definition "Aanduiding van een verdieping of niveau binnen een gebouw." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> ;
+    
+    skos:prefLabel "verdieping" ;
+    skos:relatedMatch <https://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue/floorIdentifier> ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> .
+
+<https://data.vlaanderen.be/id/concept/locatieaanduiding/vleugel>
+    a skos:Concept ;
+    skos:definition "Aanduiding van een gebouwingang of vleugel." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> ;
+    
+    skos:prefLabel "vleugel" ;
+    skos:relatedMatch <https://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue/entranceDoorIdentifier> ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/locatieaanduiding> .
+

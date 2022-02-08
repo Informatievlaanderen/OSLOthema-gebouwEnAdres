@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://data.vlaanderen.be/id/conceptscheme/geometriemethode>
+    a skos:ConceptScheme ;
+    skos:prefLabel "conceptschem geometriemethode";
+    skos:definition "Codelijst voor de geometriemethode van een geografische positie." .
+
+
+<https://data.vlaanderen.be/id/concept/geometriemethode/aangeduidDoorBeheerder>
+    a skos:Concept ;
+    skos:definition "De positie werd bepaald door de beheerder en manueel aangeduid." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/geometriemethode> ;
+    
+    skos:prefLabel "aangeduid door beheerder" ;
+    skos:relatedMatch <https://inspire.ec.europa.eu/codelist/GeometryMethodValue/byAdministrator> ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/geometriemethode> .
+
+<https://data.vlaanderen.be/id/concept/geometriemethode/afgeleidVanObject>
+    a skos:Concept ;
+    skos:definition "De positie werd automatisch afgeleid van een gekoppeld ruimtelijk object." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/geometriemethode> ;
+    
+    skos:prefLabel "afgeleid van object" ;
+    skos:relatedMatch <https://inspire.ec.europa.eu/codelist/GeometryMethodValue/fromFeature> ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/geometriemethode> .
+
+<https://data.vlaanderen.be/id/concept/geometriemethode/geinterpoleerd>
+    a skos:Concept ;
+    skos:definition "De positie werd - in afwezigheid van een gekoppeld ruimtelijk object - op een andere manier berekend." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/geometriemethode> ;
+    
+    skos:prefLabel "geïnterpoleerd" ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/geometriemethode> .
+

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+<https://data.vlaanderen.be/id/conceptscheme/perceelstatus>
+    a skos:ConceptScheme ;
+    skos:prefLabel "conceptscheme perceelstatus" ;
+    skos:definition "Codelijst voor de status van een perceel." .
+    
+<https://data.vlaanderen.be/id/concept/perceelstatus/gehistoreerd>    
+     a skos:Concept ;
+     skos:definition "Het perceel werd gehistoreerd." ;
+     skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/perceelstatus> ;
+     skos:prefLabel "gehistoreerd" ;
+     skos:relatedMatch <https://inspire.ec.europa.eu/codelist/StatusValue/retired> ;
+     skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/perceelstatus> .
+     
+<https://data.vlaanderen.be/id/concept/perceelstatus/gerealiseerd>    
+     a skos:Concept ;    
+     skos:definition "Het perceel werd geregistreerd en is in gebruik." ;
+     skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/perceelstatus> ; 
+     skos:prefLabel "gerealiseerd" ;
+     skos:relatedMatch <https://inspire.ec.europa.eu/codelist/StatusValue/current> ;
+     skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/perceelstatus> .

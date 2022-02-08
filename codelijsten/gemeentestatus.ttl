@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://data.vlaanderen.be/id/conceptscheme/gemeentestatus>
+    a skos:ConceptScheme ;
+    skos:prefLabel "conceptscheme gemeeentestatus";
+    skos:definition "Codelijst voor de status van een gemeente." .
+
+<https://data.vlaanderen.be/id/concept/gemeentestatus/gehistoreerd>
+    a skos:Concept ;
+    skos:definition "De gemeente werd opgeheven." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/gemeentestatus> ;
+    
+    skos:prefLabel "gehistoreerd" ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/gemeentestatus> .
+
+<https://data.vlaanderen.be/id/concept/gemeentestatus/inGebruik>
+    a skos:Concept ;
+    skos:definition "De gemeente werd officieel bekrachtigd." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/gemeentestatus> ;
+    
+    skos:prefLabel "in gebruik" ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/gemeentestatus> .
+
+<https://data.vlaanderen.be/id/concept/gemeentestatus/voorgesteld>
+    a skos:Concept ;
+    skos:definition "De gemeente werd voorgesteld." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/gemeentestatus> ;
+    
+    skos:prefLabel "voorgesteld" ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/gemeentestatus> .
+
