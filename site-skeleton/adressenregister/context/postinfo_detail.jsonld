@@ -18,7 +18,7 @@
     "postInfoStatus": {
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/concept/postinfostatus/"
+        "@base": "https://data.vlaanderen.be/doc/conceptscheme/postinfostatus"
       }
     },
     "postnamen": {
