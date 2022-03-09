@@ -16,5 +16,6 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "detail": "http://www.iana.org/assignments/relation/self",
+    "volgende": "http://www.w3.org/ns/hydra/core#next",
     "percelen": "@graph"
   }
