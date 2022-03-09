@@ -26,7 +26,7 @@
     "gemeenteStatus": {
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/concept/gemeentestatus/"
+        "@base": "https://data.vlaanderen.be/doc/conceptscheme/gemeentestatus"
       }
     },
     "officieleTalen": {
