@@ -20,7 +20,7 @@
         "@id": "https://data.vlaanderen.be/ns/adres#Adres.status",
         "@type": "@id",
         "@context": {
-          "@base": "https://data.vlaanderen.be/id/concept/adresstatus/"
+          "@base": "https://data.vlaanderen.be/doc/conceptscheme/adresstatus"
         }
       },
       "huisnummer": {
@@ -102,6 +102,5 @@
             "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
           }
         }
-      },
-      "detail": "http://www.iana.org/assignments/relation/self"
+      }
     }
