@@ -15,7 +15,6 @@
       "@id": "https://data.vlaanderen.be/ns/generiek#lokaleIdentificator",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "PostInfo": "https://data.vlaanderen.be/ns/adres#Postinfo",
     "postnamen": {
       "@id": "https://data.vlaanderen.be/ns/adres#postnaam",
       "@type": "@id",
@@ -32,9 +31,10 @@
     "postInfoStatus": {
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/concept/postinfostatus/"
+        "@base": "https://data.vlaanderen.be/doc/conceptscheme/postinfostatus"
       }
     },
     "detail": "http://www.iana.org/assignments/relation/self",
+    "volgende": "http://www.w3.org/ns/hydra/core#next",
     "postInfoObjecten": "@graph"
   }
