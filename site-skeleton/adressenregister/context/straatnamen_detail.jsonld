@@ -15,7 +15,6 @@
         "@id": "https://data.vlaanderen.be/ns/generiek#lokaleIdentificator",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
-      "Straatnaam": "https://data.vlaanderen.be/ns/adres#Straatnaam",
       "gemeente": {
         "@id": "http://www.w3.org/ns/prov#wasAttributedTo",
         "@type": "@id",
@@ -50,7 +49,7 @@
         "@id": "https://data.vlaanderen.be/ns/adres#Straatnaam.status",
         "@type": "@id",
         "@context": {
-          "@base": "https://data.vlaanderen.be/id/concept/straatnaamstatus/"
+          "@base": "https://data.vlaanderen.be/doc/conceptscheme/straatnaamstatus"
         }
       }
     }
