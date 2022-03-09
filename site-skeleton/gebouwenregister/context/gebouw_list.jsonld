@@ -19,9 +19,10 @@
       "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/concept/gebouwstatus/"
+        "@base": "https://data.vlaanderen.be/doc/conceptscheme/gebouwstatus"
       }
     },
     "detail": "http://www.iana.org/assignments/relation/self",
+    "volgende": "http://www.w3.org/ns/hydra/core#next",
     "gebouwen": "@graph"
   }
