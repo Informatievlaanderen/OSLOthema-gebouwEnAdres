@@ -19,10 +19,9 @@
       "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/concept/gebouwstatus/"
+        "@base": "https://data.vlaanderen.be/doc/conceptscheme/gebouwstatus"
       }
     },
-    "detail": "http://www.iana.org/assignments/relation/self",
     "gebouweenheden": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#bestaatUit",
       "@type": "@id"
