@@ -69,7 +69,5 @@
           }
         }
       }
-    },
-    "detail": "http://www.iana.org/assignments/relation/self",
-    "gebouweenheden": "@graph"
+    }
   }
