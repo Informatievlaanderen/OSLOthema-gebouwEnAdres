@@ -13,7 +13,7 @@
     "contributors-column": "Gebouw",
     "site": "site-skeleton/gebouwenregister",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-gebouwenregister/"
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-gebouwenregister/",
       "dependencies": [
         {
           "package": "OSLO-Generiek",
