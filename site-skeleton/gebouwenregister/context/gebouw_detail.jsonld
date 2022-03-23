@@ -38,7 +38,7 @@
           "@id": "https://data.vlaanderen.be/ns/gebouw#methode",
           "@type": "@id",
           "@context": {
-            "@base": "https://data.vlaanderen.be/id/concept/2Dgeometriemethode/"
+            "@base": "https://data.vlaanderen.be/doc/conceptscheme/geometriemethode"
           }
         },
         "geometrie": {
