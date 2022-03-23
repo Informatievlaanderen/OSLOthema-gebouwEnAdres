@@ -16,11 +16,26 @@ Voor de codelijsten wordt zoveel mogelijk verwezen naar de overeenstemmende lijs
 {% block jsonld %}
 <p>Een algemene JSON-LD context definitie voor dit implementatiemodel is terug te vinden op: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld" target="_blank">{{ documentroot }}/context/{{ metadata.filename }}.jsonld</a></p>
 
-De json-ld context definities gebruikt in het basisregister API endpoint zijn 
+<p>
+De json-ld context definities gebruikt in het basisregister API endpoint zijn
+</p>
+<p>
 <ul>
-<li>https://api.basisregisters.vlaanderen.be/v2/gebouwen/{objectId}: <a href="./html/context/gebouw_detail.jsonld">gebouw_detail.jsonld</a></li>
-<li>https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/{objectId}: <a href="./html/context/gebouweenheid_detail.jsonld">gebouweenheid_detail.jsonld</a></li>
-<li>https://api.basisregisters.vlaanderen.be/v2/precelen/{objectId}: <a href="./html/context/perceel_detail.jsonld">preceel_detail.jsonld</a></li>
+<li>https://api.basisregisters.vlaanderen.be/v2/gebouwen/{objectId}: <a href="/html/context/gebouw_detail.jsonld">gebouw_detail.jsonld</a></li>
+<li>https://api.basisregisters.vlaanderen.be/v2/gebouwen/{objectId}: <a href="/html/context/gebouw_detail.jsonld">gebouw_list.jsonld</a></li>
 </ul>
+</p>
+<p>
+<ul>
+<li>https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/{objectId}: <a href="/html/context/gebouweenheid_detail.jsonld">gebouweenheid_detail.jsonld</a></li>
+<li>https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/{objectId}: <a href="/html/context/gebouweenheid_detail.jsonld">gebouweenheid_list.jsonld</a></li>
+</ul>
+</p>
+<p>
+<ul>
+<li>https://api.basisregisters.vlaanderen.be/v2/precelen/{objectId}: <a href="/html/context/perceel_detail.jsonld">preceel_detail.jsonld</a></li>
+<li>https://api.basisregisters.vlaanderen.be/v2/precelen/{objectId}: <a href="/html/context/perceel_detail.jsonld">preceel_list.jsonld</a></li>
+</ul>
+</p>
 {% endblock %}
 
