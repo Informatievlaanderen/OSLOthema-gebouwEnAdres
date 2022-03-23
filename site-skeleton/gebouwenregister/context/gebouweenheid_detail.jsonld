@@ -19,14 +19,14 @@
       "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/gebouweenheidstatus/"
+        "@base": "https://data.vlaanderen.be/id/conceptscheme/gebouweenheidstatus"
       }
     },
     "functie": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#functie",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/gebouweenheidfunctie/"
+        "@base": "https://data.vlaanderen.be/id/conceptscheme/gebouweenheidfunctie"
       }
     },
     "gebouw": {
@@ -53,7 +53,7 @@
           "@id": "https://data.vlaanderen.be/ns/generiek#methode",
           "@type": "@id",
           "@context": {
-            "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode/"
+            "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode"
           }
         },
         "geometrie": {
