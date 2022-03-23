@@ -15,6 +15,13 @@
       "@id": "https://data.vlaanderen.be/ns/generiek#lokaleIdentificator",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "perceelStatus": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.status",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://data.vlaanderen.be/id/conceptscheme/perceelstatus"
+      }
+    },
     "detail": "http://www.iana.org/assignments/relation/self",
     "volgende": "http://www.w3.org/ns/hydra/core#next",
     "percelen": "@graph"
