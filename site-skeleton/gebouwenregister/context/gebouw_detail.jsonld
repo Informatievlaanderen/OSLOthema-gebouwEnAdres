@@ -35,14 +35,14 @@
       "@type": "@id",
       "@context": {
         "geometrieMethode": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#methode",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Geometrie.methode",
           "@type": "@id",
           "@context": {
             "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode"
           }
         },
         "geometrie": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#geometrie",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Geometrie.geometrie",
           "@context": {
             "gml": {
               "@id": "http://www.opengis.net/ont/geosparql#asGML",
