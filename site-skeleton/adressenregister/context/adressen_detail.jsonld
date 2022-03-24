@@ -20,15 +20,15 @@
         "@id": "https://data.vlaanderen.be/ns/adres#Adres.status",
         "@type": "@id",
         "@context": {
-          "@base": "https://data.vlaanderen.be/doc/conceptscheme/adresstatus"
+          "@base": "https://data.vlaanderen.be/id/conceptscheme/adresstatus"
         }
       },
       "huisnummer": {
-        "@id": "https://data.vlaanderen.be/ns/adres#huisnummer",
+        "@id": "https://data.vlaanderen.be/ns/adres#Adres.huisnummer",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
       "officieelToegekend": {
-        "@id": "https://data.vlaanderen.be/ns/adres#officieelToegekend",
+        "@id": "https://data.vlaanderen.be/ns/adres#Adres.officieelToegekend",
         "@type": "http://www.w3.org/2001/XMLSchema#boolean"
       },
       "postinfo": {
@@ -44,7 +44,7 @@
         "@type": "@id",
         "@context": {
           "geografischeNaam": {
-            "@id": "https://data.vlaanderen.be/ns/adres#volledigAdres",
+            "@id": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding.volledigAdres",
             "@context": {
               "spelling": "@value",
               "taal": "@language"
@@ -85,7 +85,7 @@
         }
       },
       "adresPositie": {
-        "@id": "https://data.vlaanderen.be/ns/adres#positie",
+        "@id": "https://data.vlaanderen.be/ns/adres#Adres.positie",
         "@type": "@id",
         "@context": {
           "Point": "http://www.opengis.net/ont/sf#Point",
