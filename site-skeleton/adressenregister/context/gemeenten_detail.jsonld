@@ -24,7 +24,9 @@
              "@context": {
                  "spelling": "@value",
                  "taal": "@language"
+       }
       }
+     }
     },
     "gemeenteStatus": {
       "@type": "@id",
