@@ -24,11 +24,11 @@
         }
       },
       "huisnummer": {
-        "@id": "https://data.vlaanderen.be/ns/adres#Adres.huisnummer",
+        "@id": "https://data.vlaanderen.be/ns/adres#huisnummer",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
       "officieelToegekend": {
-        "@id": "https://data.vlaanderen.be/ns/adres#Adres.officieelToegekend",
+        "@id": "https://data.vlaanderen.be/ns/adres#officieelToegekend",
         "@type": "http://www.w3.org/2001/XMLSchema#boolean"
       },
       "postinfo": {
