@@ -17,10 +17,13 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "gemeentenamen": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@id": "https://data.vlaanderen.be/ns/adres#Gemeentenaam",
       "@context": {
-        "spelling": "@value",
-        "taal": "@language"
+          "geografischeNaam": {
+             "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+             "@context": {
+                 "spelling": "@value",
+                 "taal": "@language"
       }
     },
     "gemeenteStatus": {
