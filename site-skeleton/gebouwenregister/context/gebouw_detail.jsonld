@@ -24,11 +24,17 @@
     },
     "gebouweenheden": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#bestaatUit",
-      "@type": "@id"
+      "@type": "@id",
+      "@context": {
+        "objectId": "@id",
+        "@base": "https://data.vlaanderen.be/id/gebouweenheid/"
     },
     "percelen": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#ligtOp",
-      "@type": "@id"
+      "@type": "@id",
+      "@context": {
+        "objectId": "@id",
+        "@base": "https://data.vlaanderen.be/id/perceel/"
     },
     "gebouwPolygoon": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.geometrie",
