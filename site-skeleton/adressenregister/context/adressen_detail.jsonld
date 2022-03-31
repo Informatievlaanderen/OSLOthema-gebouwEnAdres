@@ -27,6 +27,10 @@
         "@id": "https://data.vlaanderen.be/ns/adres#huisnummer",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
+      "busnummer": {
+        "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "officieelToegekend": {
         "@id": "https://data.vlaanderen.be/ns/adres#officieelToegekend",
         "@type": "http://www.w3.org/2001/XMLSchema#boolean"
@@ -44,7 +48,7 @@
         "@type": "@id",
         "@context": {
           "geografischeNaam": {
-            "@id": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding.volledigAdres",
+            "@id": "https://data.vlaanderen.be/ns/adres#volledigAdres",
             "@context": {
               "spelling": "@value",
               "taal": "@language"
@@ -85,7 +89,7 @@
         }
       },
       "adresPositie": {
-        "@id": "https://data.vlaanderen.be/ns/adres#Adres.positie",
+        "@id": "https://data.vlaanderen.be/ns/adres#positie",
         "@type": "@id",
         "@context": {
           "Point": "http://www.opengis.net/ont/sf#Point",
