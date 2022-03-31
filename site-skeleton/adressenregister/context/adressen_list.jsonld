@@ -20,7 +20,7 @@
       "@type": "@id",
       "@context": {
         "geografischeNaam": {
-          "@id": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding.volledigAdres",
+          "@id": "https://data.vlaanderen.be/ns/adres#volledigAdres",
           "@context": {
             "spelling": "@value",
             "taal": "@language"
@@ -36,7 +36,11 @@
       }
     },
     "huisnummer": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Adres.huisnummer",
+      "@id": "https://data.vlaanderen.be/ns/adres#huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "detail": "http://www.iana.org/assignments/relation/self",
