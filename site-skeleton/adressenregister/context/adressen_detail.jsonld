@@ -103,19 +103,18 @@
         "@id": "https://data.vlaanderen.be/ns/adres#positie",
         "@type": "@id",
         "@context": {
-          "Point": "http://www.opengis.net/ont/sf#Point",
-           "point": "http://www.w3.org/ns/locn#geometry",
-          "type": "@type",
-          "coordinates": {
-            "@type": "@json",
-            "@id": "https://data.europa.eu/m8g/coordinates"
-          },
           "positieGeometrieMethode": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode",
           "positieSpecificatie": "https://data.vlaanderen.be/id/conceptscheme/geometriespecificatie",
-          "gml": {
-            "@id": "http://www.opengis.net/ont/geosparql#asGML",
-            "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
-          }
+           "geometrie": {
+               "@id": "https://data.vlaanderen.be/ns/gebouw#Geometrie.geometrie",
+               "@context": {
+                    "gml": {
+                       "@id": "http://www.opengis.net/ont/geosparql#asGML",
+                       "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
+                    },
+                    "type": "@type"
         }
+       }          
       }
+     }
     }
