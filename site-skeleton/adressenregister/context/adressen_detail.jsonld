@@ -15,7 +15,6 @@
         "@id": "https://data.vlaanderen.be/ns/generiek#lokaleIdentificator",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
-      "Adres": "https://data.vlaanderen.be/ns/adres#Adres",
       "adresStatus": {
         "@id": "https://data.vlaanderen.be/ns/adres#Adres.status",
         "@type": "@id",
