@@ -56,18 +56,16 @@
             "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode"
           }
         },
-        "geometrie": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Geometrie.geometrie",
-          "@context": {
-            "gml": {
+         "geometrie": {
+           "@id": "https://data.vlaanderen.be/ns/gebouw#Geometrie.geometrie",
+           "@context": {
+             "gml": {
               "@id": "http://www.opengis.net/ont/geosparql#asGML",
               "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
-            },
-            "type": "@type",
-            "Polygon": "http://www.opengis.net/ont/sf#Polygon",
-            "Point": "http://www.opengis.net/ont/sf#Point"
+              },
+              "type": "@type"
           }
-        }
+        }          
       }
-    }
+     }      
   }
