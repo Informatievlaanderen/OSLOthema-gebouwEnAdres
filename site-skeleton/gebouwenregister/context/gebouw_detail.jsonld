@@ -55,7 +55,6 @@
               "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
             },
             "type": "@type",
-            "Polygon": "http://www.opengis.net/ont/sf#Polygon"
           }
         }
       }
