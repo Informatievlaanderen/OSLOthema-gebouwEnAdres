@@ -1,5 +1,5 @@
 {
-    "@base": "https://basisregisters.vlaanderen.be/ns/gebouw",
+    "@base": "https://data.dev-vlaanderen.be/doc/implementatiemodel/gebouwenregister/ontwerpstandaard/2022-03-09",
     "@vocab": "#",
     "identificator": "@nest",
     "id": "@id",
@@ -27,6 +27,7 @@
       "@type": "@id",
       "@context": {
         "objectId": "@id",
+         "detail": "http://www.iana.org/assignments/relation/self",
         "@base": "https://data.vlaanderen.be/id/gebouweenheid/"
     },
     "percelen": {
@@ -34,6 +35,7 @@
       "@type": "@id",
       "@context": {
         "objectId": "@id",
+         "detail": "http://www.iana.org/assignments/relation/self",
         "@base": "https://data.vlaanderen.be/id/perceel/"
     },
     "gebouwPolygoon": {
