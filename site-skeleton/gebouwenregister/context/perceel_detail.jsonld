@@ -21,5 +21,14 @@
       "@context": {
         "@base": "https://data.vlaanderen.be/id/conceptscheme/perceelstatus"
       }
+    },
+    "adressen": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.adres",
+      "@type": "@id",
+      "@context": {
+        "objectId": "@id",
+        "detail": "http://www.iana.org/assignments/relation/self",
+        "@base": "https://data.vlaanderen.be/id/adres/"
+      }
     }
   }
