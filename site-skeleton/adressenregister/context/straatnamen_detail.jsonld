@@ -64,7 +64,7 @@
         "@id": "https://data.vlaanderen.be/ns/adres#Straatnaam.status",
         "@type": "@id",
         "@context": {
-          "@base": "https://data.vlaanderen.be/doc/conceptscheme/straatnaamstatus"
+          "@base": "https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus"
         }
       }
     }
