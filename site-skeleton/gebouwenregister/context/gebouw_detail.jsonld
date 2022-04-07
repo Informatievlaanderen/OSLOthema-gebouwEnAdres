@@ -29,6 +29,7 @@
         "objectId": "@id",
          "detail": "http://www.iana.org/assignments/relation/self",
         "@base": "https://data.vlaanderen.be/id/gebouweenheid/"
+      }
     },
     "percelen": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#ligtOp",
@@ -37,6 +38,7 @@
         "objectId": "@id",
          "detail": "http://www.iana.org/assignments/relation/self",
         "@base": "https://data.vlaanderen.be/id/perceel/"
+      }
     },
     "gebouwPolygoon": {
       "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.geometrie",
