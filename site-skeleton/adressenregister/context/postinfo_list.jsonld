@@ -32,7 +32,7 @@
       "@id": "https://data.vlaanderen.be/ns/adres#Postinfo.status",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/doc/conceptscheme/postinfostatus"
+        "@base": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
       }
     },
     "detail": "http://www.iana.org/assignments/relation/self",
