@@ -1,5 +1,5 @@
-  {
-    "@base": "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-03-09",
+{
+    "@base": "https://data.dev-vlaanderen.be/doc/implementatiemodel/gebouwenregister/ontwerpstandaard/2022-03-09",
     "@vocab": "#",
     "identificator": "@nest",
     "id": "@id",
@@ -15,23 +15,20 @@
       "@id": "https://data.vlaanderen.be/ns/generiek#lokaleIdentificator",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "postInfoStatus": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Postinfo.status",
+    "perceelStatus": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.status",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
+        "@base": "https://data.vlaanderen.be/id/conceptscheme/perceelstatus"
       }
     },
-    "postnamen": {
-      "@id": "https://data.vlaanderen.be/ns/adres#postnaam",
+    "adressen": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.adres",
+      "@type": "@id",
       "@context": {
-        "geografischeNaam": {
-          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-          "@context": {
-            "spelling": "@value",
-            "taal": "@language"
-          }
-        }
+        "objectId": "@id",
+        "detail": "http://www.iana.org/assignments/relation/self",
+        "@base": "https://data.vlaanderen.be/id/adres/"
       }
     }
   }

@@ -1,5 +1,5 @@
 {
-    "@base": "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-03-09",
+    "@base": "https://data.dev-vlaanderen.be/doc/implementatiemodel/gebouwenregister/ontwerpstandaard/2022-03-09",
     "@vocab": "#",
     "identificator": "@nest",
     "id": "@id",
@@ -15,26 +15,14 @@
       "@id": "https://data.vlaanderen.be/ns/generiek#lokaleIdentificator",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "gemeentenaam": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Gemeentenaam",
-      "@context": {
-          "geografischeNaam": {
-             "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-             "@context": {
-                 "spelling": "@value",
-                 "taal": "@language"
-       }
-      }
-     }
-    },
-    "gemeenteStatus": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Gemeente.status",
+    "gebouweenheidStatus": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
+        "@base": "https://data.vlaanderen.be/id/conceptscheme/gebouweenheidstatus"
       }
     },
     "detail": "http://www.iana.org/assignments/relation/self",
     "volgende": "http://www.w3.org/ns/hydra/core#next",
-    "gemeenten": "@graph"
+    "gebouweenheden": "@graph"
   }

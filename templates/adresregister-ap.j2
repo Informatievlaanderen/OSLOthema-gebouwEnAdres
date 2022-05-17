@@ -12,4 +12,38 @@ Het profiel overstijgt het louter registreren van adressen omdat het bijkomend v
 </p>
 {% endblock %}
 
+{% block jsonld %}
+<p>Een algemene JSON-LD context definitie voor dit implementatiemodel is terug te vinden op: <a href="{{ documentroot }}/context/{{ metadata.filename }}.jsonld" target="_blank">{{ documentroot }}/context/{{ metadata.filename }}.jsonld</a></p>
 
+<p>
+De json-ld context definities gebruikt in het basisregister API endpoint zijn
+</p>
+<p>
+Adres:
+<ul>
+<li><a href="{{ documentroot }}/html/context/adressen_detail.jsonld">adressen_detail.jsonld</a></li>
+<li><a href="{{ documentroot }}/html/context/adressen_list.jsonld">adressen_list.jsonld</a></li>
+</ul>
+</p>
+<p>
+Gemeente:
+<ul>
+<li><a href="{{ documentroot }}/html/context/gemeenten_detail.jsonld">gemeenten_detail.jsonld</a></li>
+<li><a href="{{ documentroot }}/html/context/gemeenten_list.jsonld">gemeenten_list.jsonld</a></li>
+</ul>
+</p>
+<p>
+Straatnaam:
+<ul>
+<li><a href="{{ documentroot }}/html/context/straatnamen_detail.jsonld">straatnamen_detail.jsonld</a></li>
+<li><a href="{{ documentroot }}/html/context/straatnamen_list.jsonld">straatnamen_list.jsonld</a></li>
+</ul>
+</p>
+<p>
+Postinfo:
+<ul>
+<li><a href="{{ documentroot }}/html/context/postinfo_detail.jsonld">postinfo_detail.jsonld</a></li>
+<li><a href="{{ documentroot }}/html/context/postinfo_list.jsonld">postinfo_list.jsonld</a></li>
+</ul>
+</p>
+{% endblock %}
