@@ -143,7 +143,7 @@ Voor deze entiteit zijn geen eigenschappen gedefinieerd.
 {% if ((entity.properties | length) > 0 ) %} 
 | Eigenschap | Verwacht Type | Kardinaliteit | Beschrijving | Gebruik | Codelijst |
 |------------|---------------|---------------|--------------|---------|-----------|{% for prop in entity['properties'] | sort(attribute=sortattr) %}
-| [{{ prop.label[language] }}]({{ prop.uri }}) | {% for range in prop.scopedrange %}{% if range['range_uri'] == range['range_puri'] %}[{{range['range_label'][language]}}]({{ range['range_uri'] }}){% else %}[{{ range['range_label'][language] }}]({{ range['range_uri'] }}){% endif %}{% endfor %} | {{ prop.cardinality }} | {{ prop.description[language] }} | {{ prop.usage[language] | safe }} | {% if prop['codelist_uri'] %}[Link]({{ prop['codelist_uri'] }}){% endif %} |{% endfor %}{% endif %}
+| <a href="{{ prop.uri }}" class="--tooltip --tooltip-right" data-content="{{ prop.uri }}">{{ prop.label[language] }}</a> | {% for range in prop.scopedrange %}{% if range['range_uri'] == range['range_puri'] %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% else %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% endif %}{% endfor %} | {{ prop.cardinality }} | {{ prop.description[language] }} | {{ prop.usage[language] | safe }} | {% if prop['codelist_uri'] %}[Link]({{ prop['codelist_uri'] }}){% endif %} |{% endfor %}{% endif %}
 {% endfor %}
 
 ## JSON-LD context {{'{#jsonld}'}}
