@@ -14,12 +14,12 @@
 
 {% if metadata.navigation.next %}
 **Volgende versie**<br>
-{{metadata.navigation.next}}
+[{{metadata.navigation.next}}]({{metadata.navigation.next}})
 {% endif %}
 
 {% if metadata.navigation.prev %}
 **Vorige versie**<br>
-{{metadata.navigation.prev}}
+[{{metadata.navigation.prev}}]({{metadata.navigation.prev}})
 {% endif %}
 
 **Brondata**<br>
@@ -36,7 +36,7 @@
 
 **Afhankelijkheden**<br>
 {% for dep in metadata.dependencies %}
-[dep.packagelabel]({{ dep.packageurl }})
+[{{dep.packagelabel}}]({{ dep.packageurl }})
 {% endfor %}
 
 ___
@@ -45,7 +45,7 @@ ___
 Dit document beschrijft een **implementatiemodel**, in dit geval **{{ metadata.title }}**.Een implementatiemodel is een toepassing van vocabularia voor een concreet doel. Het beschrijft in alle detail (zoals kardinaliteiten, codelijsten, datatypes, ...) de gewenste datastructuur.
 {% endblock %}
 
-## Samenvatting
+## Samenvatting {{'{#summary}'}}
 
 {% block summary %} 
 Dit is een implementatiemodel voor het adressenregister dat het applicatieprofiel [Adresregister](https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/).
@@ -55,7 +55,7 @@ Het profiel overstijgt het louter registreren van adressen omdat het bijkomend v
 {% endblock %}
 
 
-## Status van dit document
+## Status van dit document {{'{#status}'}}
 
 {% block status %}
 Dit implementatiemodel heeft status [{{ metadata.statuslabel }}]({{metadata.status}}) en werd uitgegeven op {{ metadata.issued }}.
@@ -63,33 +63,38 @@ Dit implementatiemodel heeft status [{{ metadata.statuslabel }}]({{metadata.stat
 Informatie over het gevolgde proces en de beslissingen om tot deze specificatie te komen zijn beschikbaar in het [standaardenregister]({{metadata.standaardregisterurl}}).
 {% endblock %}
 
-## Licentie
+## Licentie  {{'{#license}'}}
 
 {% block license %}
 Deze specificatie van [Informatie Vlaanderen][] is gepubliceerd onder de ["Modellicentie Gratis Hergebruik - v1.0"][Licentie].
 {% endblock %}
 
-## Conformiteit
+## Conformiteit  {{'{#comformence}'}}
 
 {% block conformance %}
 De conformiteit voor implementatiemodellen is [hier][Comformiteit] te vinden.
 {% endblock %}
 
-## Overzicht
-
+## Overzicht  {{'{#overview}'}}
 {% if ( ( classes | length > 0)   ) %}
+
 In dit document wordt correct gebruik van de volgende entiteiten toegelicht:<br />
 | {%- for class in classes | sort(attribute=sortattr) %}
-[class.label[language]](#{{ class.name }}) |
+[{{class.label[language]}}](#{{ class.name }}) |
 {%- endfor %}
+
 {% endif %}
-{% if ( ( datatypes | length ) > 0 ) %}                 
+
+{% if ( ( datatypes | length ) > 0 ) %}
+In dit document worden de volgende datatypes toegelicht:            
+
 |{%- for datatype in datatypes |sort(attribute=sortattr) %} 
 [{{ datatype.label[language] }}](#{{ datatype.name }}) |
+
 {%- endfor %}
 {% endif %}
 
-[![]({{ documentroot }}/html/overview.jpg)]({{ documentroot }}/html/overview.jpg)
+[![](/assets/oslo{{ documentroot }}/html/overview.jpg)](/assets/oslo/{{ documentroot }}/html/overview.jpg)
 {% block images %}
 {% endblock %}
 
@@ -120,30 +125,31 @@ TODO
 
 {% endfor %}
 
-
+## JSON-LD context {{'{#jsonld}'}}
 {% block jsonld %}
 Een algemene JSON-LD context definitie voor dit implementatiemodel is terug te vinden op:
-[{{ documentroot }}/context/{{ metadata.filename }}.jsonld]({{ documentroot }}/context/{{ metadata.filename }}.jsonld)
+[/assets/oslo/{{ documentroot }}/context/{{ metadata.filename }}.jsonld](/assets/oslo/{{ documentroot }}/context/{{ metadata.filename }}.jsonld)
 
 De json-ld context definities gebruikt in het basisregister API endpoint zijn
 
 **Adres:**
-- [adressen_detail.jsonld]({{ documentroot }}/html/context/adressen_detail.jsonld)
-- [adressen_list.jsonld]({{ documentroot }}/html/context/adressen_list.jsonld)
+- [adressen_detail.jsonld](/assets/oslo/{{ documentroot }}/html/context/adressen_detail.jsonld)
+- [adressen_list.jsonld](/assets/oslo/{{ documentroot }}/html/context/adressen_list.jsonld)
 
 **Gemeente:**
-- [gemeenten_detail.jsonld]({{ documentroot }}/html/context/gemeenten_detail.jsonld)
-- [gemeenten_list.jsonld]({{ documentroot }}/html/context/gemeenten_list.jsonld)
+- [gemeenten_detail.jsonld](/assets/oslo/{{ documentroot }}/html/context/gemeenten_detail.jsonld)
+- [gemeenten_list.jsonld](/assets/oslo/{{ documentroot }}/html/context/gemeenten_list.jsonld)
 
 **Straatnaam:**
-- [straatnamen_detail.jsonld]({{ documentroot }}/html/context/straatnamen_detail.jsonld)
-- [straatnamen_list.jsonld]({{ documentroot }}/html/context/straatnamen_list.jsonld)
+- [straatnamen_detail.jsonld](/assets/oslo/{{ documentroot }}/html/context/straatnamen_detail.jsonld)
+- [straatnamen_list.jsonld](/assets/oslo/{{ documentroot }}/html/context/straatnamen_list.jsonld)
 
 **Postinfo:**
-- [postinfo_detail.jsonld]({{ documentroot }}/html/context/postinfo_detail.jsonld)
-- [postinfo_list.jsonld]({{ documentroot }}/html/context/postinfo_list.jsonld)
+- [postinfo_detail.jsonld](/assets/oslo/{{ documentroot }}/html/context/postinfo_detail.jsonld)
+- [postinfo_list.jsonld](/assets/oslo/{{ documentroot }}/html/context/postinfo_list.jsonld)
 {% endblock %}
 
+## SHACL template {{'{#shacl}'}}
 
 <!-- URLS -->
 [Licentie]:https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0
