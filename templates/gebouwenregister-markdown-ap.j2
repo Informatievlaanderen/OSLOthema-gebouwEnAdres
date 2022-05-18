@@ -42,7 +42,7 @@
 ___
 
 {% block introduction %}
-<div class="vl-typography"><p id="introduction" class="vl-introduction pt-3"> 
+<div class="vl-typography"><p id="introduction" class="vl-introduction pt-3">
 Dit document beschrijft een <strong>implementatiemodel</strong>, in dit geval <strong>{{ metadata.title }}</strong>.Een implementatiemodel is een toepassing van vocabularia voor een concreet doel. Het beschrijft in alle detail (zoals kardinaliteiten, codelijsten, datatypes, ...) de gewenste datastructuur.
 </p></div>
 {% endblock %}
@@ -50,10 +50,20 @@ Dit document beschrijft een <strong>implementatiemodel</strong>, in dit geval <s
 ## Samenvatting {{'{#summary}'}}
 
 {% block summary %} 
-Dit is een implementatiemodel voor het adressenregister dat het applicatieprofiel [Adresregister](https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/).
-De applicatie waarop dit profiel betrekking heeft is een Vlaamse adresregister. Adresregistratie houdt in dat de beheerders van dit gegeven (in België de gemeenten) adressen en adrescomponenten officieel vaststellen en vastleggen in een register. Het Vlaamse adresregister vormt zo de enige en unieke bron voor adressen in Vlaanderen.
-Typisch voor een adresregister is dat de adressen gestructureerd worden. Het adres is een op zichzelf staand object met een eigen identificator en levensloop en bestaat uit adrescomponenten die op hun beurt aan dezelfde kwalificaties voldoen. De adrescomponenten die we hier bedoelen zijn Gemeentenaam, Straatnaam en Postinfo.
-Het profiel overstijgt het louter registreren van adressen omdat het bijkomend vastlegt hoe adressen er als attribuut van een ander gegeven moeten uitzien (datatype Adresvoorstelling) of welke bijkomende kenmerken (bv. het volledig adres) er nog van het geregistreerd adres kunnen worden uitgewisseld.
+Dit is een implementatiemodel van het applicatieprofiel [OSLO Gebouwenregister](https://data.vlaanderen.be/doc/applicatieprofiel/gebouwenregister)
+
+De applicatie waarop dit profiel betrekking heeft is een Gebouwenregister. 
+Gebouwregistratie houdt in dat de beheerders van dit gegeven gebouwen en gebouweenheden officieel vaststellen en vastleggen in een register. 
+Het Gebouwenregister vormt zo de enige en unieke bron voor gebouwinformatie.
+
+De kardinaliteiten op attributen en associaties in het model van het
+[https://overheid.vlaanderen.be/producten-diensten/gebouwen-adressenregister](Gebouwenregister) waarop OSLO-Gebouw is gebaseerd 
+werden overgenomen en bleken maar op een paar punten af te wijken van deze in [INSPIRE-Building](https://inspire.ec.europa.eu/data-specifications/2892). 
+Zo laat het Gebouwenregister slechts één geometrie toe (de referentiegeometrie) en zijn de gebouw- en gebouweenheidstatus verplicht, 
+wat logisch is gezien de registratieopdracht van het register.
+
+Voor de codelijsten wordt zoveel mogelijk verwezen naar de overeenstemmende lijsten in INSPIRE. Echter waar deze codelijsten niet 100% overeenstemmen 
+en moeten worden uitgebreid/ingeperkt/afgestemd, kon nog geen verwijzing gebeuren.
 {% endblock %}
 
 
@@ -143,28 +153,24 @@ Een algemene JSON-LD context definitie voor dit implementatiemodel is terug te v
 
 De json-ld context definities gebruikt in het basisregister API endpoint zijn
 
-**Adres:**
-- [adressen_detail.jsonld][]
-- [adressen_list.jsonld][]
+**Gebouw:**
+- [gebouw_detail.jsonld][]
+- [gebouw_list.jsonld][]referentiegeometrie
 
-**Gemeente:**
-- [gemeenten_detail.jsonld][]
-- [gemeenten_list.jsonld][]
+**Gebouweenheid:**
+- [gebouweenheid_detail.jsonld][]
+- [gebouweenheid_list.jsonld][]
 
-**Straatnaam:**
-- [straatnamen_detail.jsonld][]
-- [straatnamen_list.jsonld][]
-
-**Postinfo:**
-- [postinfo_detail.jsonld][]
-- [postinfo_list.jsonld][]
+**Perceel:**
+- [perceel_detail.jsonld][]
+- [perceel_list.jsonld][]
 
 {% endblock %}
 
 ## SHACL template {{'{#shacl}'}}
 (niet normatief)
 {% block shacl%}
-Een herbruikbare SHACL template definitie voor dit implementatiemodel is terug te vinden op:
+Een herbruikbare SHAreferentiegeometrieCL template definitie voor dit implementatiemodel is terug te vinden op:
 [/assets/oslo/{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl](/assets/oslo/{{ documentroot }}/shacl/{{ metadata.filename }}-SHACL.ttl)
 {% endblock %}
 
@@ -173,14 +179,11 @@ Een herbruikbare SHACL template definitie voor dit implementatiemodel is terug t
 [Informatie Vlaanderen]:http://vlaanderen.be/informatievlaanderen
 [Comformiteit]:https://data.dev-vlaanderen.be/doc/begeleidend/implementatiemodellen/conformiteit
 
-[adressen_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/adressen_detail.jsonld
-[adressen_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/adressen_list.jsonld
+[gebouw_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/gebouw_detail.jsonld
+[gebouw_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/gebouw_list.jsonld
 
-[gemeenten_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/gemeenten_detail.jsonld
-[gemeenten_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/gemeenten_list.jsonld
+[gebouweenheid_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/gebouweenheid_detail.jsonld
+[gebouweenheid_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/gebouweenheid_list.jsonld
 
-[straatnamen_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/straatnamen_detail.jsonld
-[straatnamen_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/straatnamen_list.jsonld
-
-[postinfo_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/postinfo_detail.jsonld
-[postinfo_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/postinfo_list.jsonld
+[perceel_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/perceel_detail.jsonld
+[perceel_list.jsonld]:/assets/oslo{{ documentroot }}/html/context/perceel_list.jsonld
