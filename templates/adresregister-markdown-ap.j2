@@ -1,0 +1,151 @@
+{% set language = "nl" %}
+{% set sortattr = "sort" %}
+
+# {{ metadata.title }}
+
+**Status**<br>
+{{metadata.status}}
+
+**Uitgegeven op**<br>
+{{metadata.issued}}
+
+**Deze versie**<br>
+{{metadata.navigation.self}}
+
+{% if metadata.navigation.next %}
+**Volgende versie**<br>
+{{metadata.navigation.next}}
+{% endif %}
+
+{% if metadata.navigation.prev %}
+**Vorige versie**<br>
+{{metadata.navigation.prev}}
+{% endif %}
+
+**Brondata**<br>
+{{metadata.repositoryurl}}
+
+**Changelog**<br>
+{{metadata.changelogurl}}
+
+**Opmerkingen en feedback**<br>
+{{metadata.feedbackurl}}
+
+**Standaardenregister**<br>
+[{{metadata.standaardregisterurl}}]({{metadata.standaardregisterurl}})
+
+**Afhankelijkheden**<br>
+{% for dep in metadata.dependencies %}
+[dep.packagelabel]({{ dep.packageurl }})
+{% endfor %}
+
+___
+
+{% block introduction %}
+Dit document beschrijft een **implementatiemodel**, in dit geval **{{ metadata.title }}**.Een implementatiemodel is een toepassing van vocabularia voor een concreet doel. Het beschrijft in alle detail (zoals kardinaliteiten, codelijsten, datatypes, ...) de gewenste datastructuur.
+{% endblock %}
+
+## Samenvatting
+
+{% block summary %} 
+Dit is een implementatiemodel voor het adressenregister dat het applicatieprofiel [Adresregister](https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/).
+De applicatie waarop dit profiel betrekking heeft is een Vlaamse adresregister. Adresregistratie houdt in dat de beheerders van dit gegeven (in België de gemeenten) adressen en adrescomponenten officieel vaststellen en vastleggen in een register. Het Vlaamse adresregister vormt zo de enige en unieke bron voor adressen in Vlaanderen.
+Typisch voor een adresregister is dat de adressen gestructureerd worden. Het adres is een op zichzelf staand object met een eigen identificator en levensloop en bestaat uit adrescomponenten die op hun beurt aan dezelfde kwalificaties voldoen. De adrescomponenten die we hier bedoelen zijn Gemeentenaam, Straatnaam en Postinfo.
+Het profiel overstijgt het louter registreren van adressen omdat het bijkomend vastlegt hoe adressen er als attribuut van een ander gegeven moeten uitzien (datatype Adresvoorstelling) of welke bijkomende kenmerken (bv. het volledig adres) er nog van het geregistreerd adres kunnen worden uitgewisseld.
+{% endblock %}
+
+
+## Status van dit document
+
+{% block status %}
+Dit implementatiemodel heeft status [{{ metadata.statuslabel }}]({{metadata.status}}) en werd uitgegeven op {{ metadata.issued }}.
+
+Informatie over het gevolgde proces en de beslissingen om tot deze specificatie te komen zijn beschikbaar in het [standaardenregister]({{metadata.standaardregisterurl}}).
+{% endblock %}
+
+## Licentie
+
+{% block license %}
+Deze specificatie van [Informatie Vlaanderen][] is gepubliceerd onder de ["Modellicentie Gratis Hergebruik - v1.0"][Licentie].
+{% endblock %}
+
+## Conformiteit
+
+{% block conformance %}
+De conformiteit voor implementatiemodellen is [hier][Comformiteit] te vinden.
+{% endblock %}
+
+## Overzicht
+
+{% if ( ( classes | length > 0)   ) %}
+In dit document wordt correct gebruik van de volgende entiteiten toegelicht:<br />
+| {%- for class in classes | sort(attribute=sortattr) %}
+[class.label[language]](#{{ class.name }}) |
+{%- endfor %}
+{% endif %}
+{% if ( ( datatypes | length ) > 0 ) %}                 
+|{%- for datatype in datatypes |sort(attribute=sortattr) %} 
+[{{ datatype.label[language] }}](#{{ datatype.name }}) |
+{%- endfor %}
+{% endif %}
+
+[![]({{ documentroot }}/html/overview.jpg)]({{ documentroot }}/html/overview.jpg)
+{% block images %}
+{% endblock %}
+
+## Entiteiten
+
+{% for entity in classes | sort(attribute=sortattr) %}
+
+### [{{ entity.label[language] }}]({{ entity.uri }})
+
+**Beschrijving**<br>
+{{ entity.description[language] }}
+
+{% if entity.usage[language] %}
+**Gebruik**<br>
+{{ entity.usage[language] | safe }}
+{% endif %}
+
+{% if ((entity.parents | length) > 0 ) %} 
+**Subklasse van**<br>
+{%- for parent in entity['parents'] %}
+    [{{ parent.label }}]({{ parent.scoped_uri}}) {% if not loop.last %}, {% endif %}
+{%- endfor %}
+{% endif %}
+
+**Eigenschappen**<br>
+
+TODO
+
+{% endfor %}
+
+
+{% block jsonld %}
+Een algemene JSON-LD context definitie voor dit implementatiemodel is terug te vinden op:
+[{{ documentroot }}/context/{{ metadata.filename }}.jsonld]({{ documentroot }}/context/{{ metadata.filename }}.jsonld)
+
+De json-ld context definities gebruikt in het basisregister API endpoint zijn
+
+**Adres:**
+- [adressen_detail.jsonld]({{ documentroot }}/html/context/adressen_detail.jsonld)
+- [adressen_list.jsonld]({{ documentroot }}/html/context/adressen_list.jsonld)
+
+**Gemeente:**
+- [gemeenten_detail.jsonld]({{ documentroot }}/html/context/gemeenten_detail.jsonld)
+- [gemeenten_list.jsonld]({{ documentroot }}/html/context/gemeenten_list.jsonld)
+
+**Straatnaam:**
+- [straatnamen_detail.jsonld]({{ documentroot }}/html/context/straatnamen_detail.jsonld)
+- [straatnamen_list.jsonld]({{ documentroot }}/html/context/straatnamen_list.jsonld)
+
+**Postinfo:**
+- [postinfo_detail.jsonld]({{ documentroot }}/html/context/postinfo_detail.jsonld)
+- [postinfo_list.jsonld]({{ documentroot }}/html/context/postinfo_list.jsonld)
+{% endblock %}
+
+
+<!-- URLS -->
+[Licentie]:https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0
+[Informatie Vlaanderen]:http://vlaanderen.be/informatievlaanderen
+[Comformiteit]:https://data.dev-vlaanderen.be/doc/begeleidend/implementatiemodellen/conformiteit
