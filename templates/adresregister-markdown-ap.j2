@@ -43,16 +43,16 @@ ___
 
 {% block introduction %}
 <div class="vl-typography"><p id="introduction" class="vl-introduction pt-3"> 
-Dit document beschrijft een <strong>implementatiemodel</strong>, in dit geval <strong>{{ metadata.title }}</strong>.Een implementatiemodel is een toepassing van vocabularia voor een concreet doel. Het beschrijft in alle detail (zoals kardinaliteiten, codelijsten, datatypes, ...) de gewenste datastructuur.
+Dit document beschrijft een <strong>implementatiemodel</strong>, in dit geval het <strong>{{ metadata.title }}</strong>. Een implementatiemodel is een toepassing van vocabularia voor een concreet doel. Het beschrijft in alle detail (zoals kardinaliteiten, codelijsten, datatypes, ...) de gewenste datastructuur.
 </p></div>
 {% endblock %}
 
 ## Samenvatting {{'{#summary}'}}
 
 {% block summary %} 
-Dit is een implementatiemodel voor het adressenregister dat het applicatieprofiel [Adresregister](https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/).
-De applicatie waarop dit profiel betrekking heeft is een Vlaamse adresregister. Adresregistratie houdt in dat de beheerders van dit gegeven (in België de gemeenten) adressen en adrescomponenten officieel vaststellen en vastleggen in een register. Het Vlaamse adresregister vormt zo de enige en unieke bron voor adressen in Vlaanderen.
-Typisch voor een adresregister is dat de adressen gestructureerd worden. Het adres is een op zichzelf staand object met een eigen identificator en levensloop en bestaat uit adrescomponenten die op hun beurt aan dezelfde kwalificaties voldoen. De adrescomponenten die we hier bedoelen zijn Gemeentenaam, Straatnaam en Postinfo.
+Dit is een implementatiemodel van het applicatieprofiel [Adressenregister](https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/).
+De applicatie waarop dit profiel betrekking heeft is een Vlaamse adressenregister. Adresregistratie houdt in dat de beheerders van dit gegeven (in België de gemeenten) adressen en adrescomponenten officieel vaststellen en vastleggen in een register. Het Vlaamse adressenregister vormt zo de enige en unieke bron voor adressen in Vlaanderen.
+Typisch voor een adressenregister is dat de adressen gestructureerd worden. Het adres is een op zichzelf staand object met een eigen identificator en levensloop en bestaat uit adrescomponenten die op hun beurt aan dezelfde kwalificaties voldoen. De adrescomponenten die we hier bedoelen zijn Gemeentenaam, Straatnaam en Postinfo.
 Het profiel overstijgt het louter registreren van adressen omdat het bijkomend vastlegt hoe adressen er als attribuut van een ander gegeven moeten uitzien (datatype Adresvoorstelling) of welke bijkomende kenmerken (bv. het volledig adres) er nog van het geregistreerd adres kunnen worden uitgewisseld.
 {% endblock %}
 
@@ -68,7 +68,7 @@ Informatie over het gevolgde proces en de beslissingen om tot deze specificatie 
 ## Licentie  {{'{#license}'}}
 
 {% block license %}
-Deze specificatie van [Informatie Vlaanderen][] is gepubliceerd onder de ["Modellicentie Gratis Hergebruik - v1.0"][Licentie].
+Deze specificatie van [Digitaal Vlaanderen][] is gepubliceerd onder de ["Modellicentie Gratis Hergebruik - v1.0"][Licentie].
 {% endblock %}
 
 ## Conformiteit  {{'{#comformence}'}}
