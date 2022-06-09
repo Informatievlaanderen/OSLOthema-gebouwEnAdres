@@ -1,5 +1,5 @@
     {
-      "@base": "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-03-09",
+      "@base": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister",
       "@vocab": "#",
       "identificator": "@nest",
       "id": "@id",
