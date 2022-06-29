@@ -8,12 +8,12 @@
     "title": "Gebouwenregister",
     "license" : "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
-    "publication-date": "2022-03-22",
+    "publication-date": "2022-06-21",
     "contributors-file": "stakeholders.csv",
     "contributors-column": "Gebouw",
     "site": "site-skeleton/gebouwenregister",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-gebouwenregister/",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-gebouwenregister.html",
       "dependencies": [
         {
           "package": "OSLO-Generiek",
