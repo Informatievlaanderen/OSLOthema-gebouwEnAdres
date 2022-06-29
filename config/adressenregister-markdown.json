@@ -13,7 +13,7 @@
       "contributors-column": "Adres",
       "site": "site-skeleton/adressenregister",
       "feedbackurl": "https://github.com/informatievlaanderen/OSLOthema-gebouwEnAdres/issues",
-      "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-adresregister/applicatieprofiel-adresregister.html",
+      "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-adresregister.html",
       "dependencies": [
         {
           "package": "OSLO-Generiek",
