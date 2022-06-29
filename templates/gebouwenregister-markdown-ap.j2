@@ -101,7 +101,7 @@ In dit document wordt correct gebruik van de volgende entiteiten toegelicht:<br 
 In dit document worden de volgende datatypes toegelicht:            
 
 |{%- for datatype in datatypes |sort(attribute=sortattr) %} 
-<a href="#{{ datatype.name }}">{{ {{ datatype.label[language] }} }}</a> |
+<a href="#{{ datatype.name }}">{{ datatype.label[language] }}</a> |
 
 {%- endfor %}
 {% endif %}
