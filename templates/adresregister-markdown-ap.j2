@@ -101,7 +101,7 @@ In dit document worden de volgende datatypes toegelicht:
 {% if ((entity.parents | length) > 0 ) %} 
 **Subklasse van**<br>
 {%- for parent in entity['parents'] %}
-    [{{ parent.label }}]({{ parent.scoped_uri}}) {% if not loop.last %}, {% endif %}
+    <a href="#{{ parent.scoped_uri | urlencode }}">{{ parent.label }}</a>{% if not loop.last %}, {% endif %}
 {%- endfor %}
 {% endif %}
 
