@@ -141,9 +141,6 @@ Voor dit datatype zijn geen eigenschappen gedefinieerd.
 | Eigenschap | Verwacht Type | Kardinaliteit | Beschrijving | Gebruik | Codelijst |
 |------------|---------------|---------------|--------------|---------|-----------|{% for prop in entity['properties'] | sort(attribute=sortattr) %}
 | <a id="{{ (entity.name ~ ':' ~ prop.name ) | urlencode }}" href="{{ prop.uri }}" class="--tooltip --tooltip-right" data-content="{{ prop.uri }}">{{ prop.label[language] }}</a> | {% for range in prop.scopedrange %}{% if range['range_uri'] == range['range_puri'] %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% else %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% endif %}{% endfor %} | {{ prop.cardinality }} | {{ prop.description[language] }} | {{ prop.usage[language] | safe }} | {% if prop['codelist_uri'] %}[Link]({{ prop['codelist_uri'] }}){% endif %} |{% endfor %}{% endif %}        
-{% endif %}
-{% endfor %}
-{% endif %}
 
 ## JSON-LD context {{'{#jsonld}'}}
 {% block jsonld %}
