@@ -6,15 +6,6 @@
 **Status**<br>
 {{metadata.status}}
 
-**Brondata**<br>
-{{metadata.repositoryurl}}
-
-**Changelog**<br>
-{{metadata.changelogurl}}
-
-**Opmerkingen en feedback**<br>
-{{metadata.feedbackurl}}
-
 **Standaardenregister**<br>
 [{{metadata.standaardregisterurl}}]({{metadata.standaardregisterurl}})
 
@@ -150,6 +141,9 @@ Voor dit datatype zijn geen eigenschappen gedefinieerd.
 | Eigenschap | Verwacht Type | Kardinaliteit | Beschrijving | Gebruik | Codelijst |
 |------------|---------------|---------------|--------------|---------|-----------|{% for prop in entity['properties'] | sort(attribute=sortattr) %}
 | <a id="{{ (entity.name ~ ':' ~ prop.name ) | urlencode }}" href="{{ prop.uri }}" class="--tooltip --tooltip-right" data-content="{{ prop.uri }}">{{ prop.label[language] }}</a> | {% for range in prop.scopedrange %}{% if range['range_uri'] == range['range_puri'] %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% else %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% endif %}{% endfor %} | {{ prop.cardinality }} | {{ prop.description[language] }} | {{ prop.usage[language] | safe }} | {% if prop['codelist_uri'] %}[Link]({{ prop['codelist_uri'] }}){% endif %} |{% endfor %}{% endif %}        
+{% endif %}
+{% endfor %}
+{% endif %}
 
 ## JSON-LD context {{'{#jsonld}'}}
 {% block jsonld %}
@@ -185,7 +179,7 @@ Een herbruikbare SHACL template definitie voor dit implementatiemodel is terug t
 
 <!-- URLS -->
 [Licentie]:https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0
-[Informatie Vlaanderen]:http://vlaanderen.be/informatievlaanderen
+[Digitaal Vlaanderen]:http://vlaanderen.be/informatievlaanderen
 [Comformiteit]:https://data.dev-vlaanderen.be/doc/begeleidend/implementatiemodellen/conformiteit
 
 [adressen_detail.jsonld]:/assets/oslo{{ documentroot }}/html/context/adressen_detail.jsonld
