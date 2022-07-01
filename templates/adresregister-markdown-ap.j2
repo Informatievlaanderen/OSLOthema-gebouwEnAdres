@@ -92,7 +92,7 @@ In dit document worden de volgende datatypes toegelicht:
 {% if ((entity.parents | length) > 0 ) %} 
 **Subklasse van**<br>
 {%- for parent in entity['parents'] %}
-    <a href="#{{ parent.scoped_uri | urlencode }}">{{ parent.label }}</a>{% if not loop.last %}, {% endif %}
+    <a href="{{ parent.scoped_uri }}">{{ parent.label }}</a>{% if not loop.last %}, {% endif %}
 {%- endfor %}
 {% endif %}
 
@@ -126,7 +126,7 @@ Voor deze entiteit zijn geen eigenschappen gedefinieerd.
 **Gebruik**<br>{{ entity.usage[language] | safe }}
         {% endif %}
         {% if ((entity.parents | length) > 0 ) %} 
-**Subklasse van <br>
+**Subklasse van**<br>
             {%- for parent in entity['parents'] %}
 [{{ parent.label }}]({{ parent.scoped_uri}}){% if not loop.last %}, {% endif %}
             {%- endfor %}
