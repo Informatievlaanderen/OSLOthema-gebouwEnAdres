@@ -17,7 +17,7 @@
 ___
 
 {% block introduction %}
-<div class="vl-typography"><p id="introduction" class="vl-introduction pt-3">
+<div class="vl-typography"><p id="introduction" class="vl-introduction pt-3"> 
 Dit document beschrijft een <strong>implementatiemodel</strong>, in dit geval het <strong>{{ metadata.title }}</strong>. Een implementatiemodel is een toepassing van vocabularia voor een concreet doel. Het beschrijft in alle detail (zoals kardinaliteiten, codelijsten, datatypes, ...) de gewenste datastructuur.
 </p></div>
 {% endblock %}
@@ -109,7 +109,7 @@ In dit document worden de volgende datatypes toegelicht:
 **Eigenschappen**<br>
 {% if ((entity.properties | length) > 0 ) %} 
 Voor deze entiteit zijn de volgende eigenschappen gedefinieerd: {%- for prop in entity['properties'] | sort(attribute=sortattr) %}
-  <a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
+<a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
 {%- endfor %}.
 {% else %}
 Voor deze entiteit zijn geen eigenschappen gedefinieerd.
