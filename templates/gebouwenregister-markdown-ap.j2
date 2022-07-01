@@ -124,42 +124,48 @@ Voor deze entiteit zijn geen eigenschappen gedefinieerd.
 {% block datatypes %}
 {% if datatypes %}
 ## datatypes
-{% for entity in datatypes | sort(attribute=sortattr)%}
-{% if entity.scopeduri %}
-<h3 class="vl-title vl-title--h3" id="{{ entity.name }}" >
-    <a href="{{ entity.scopeduri }}" class="--tooltip --tooltip-right" data-content="{{ entity.uri }}">{{ entity.label[language] }}</a>
-</h3>{% else %}
-<h3 class="vl-title vl-title--h3" id="{{ entity.name }}">
-    <a href="{{ entity.uri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a>
-</h3>{% endif %}
-**Beschrijving**<br>{{ entity.description[language] }}
-{% if entity.usage[language] %}**Gebruik**<br>{{ entity.usage[language] | safe }}{% endif %}
-{% if ((entity.parents | length) > 0 ) %} 
-**Subklasse van <br>
-    {%- for parent in entity['parents'] %}
-        [{{ parent.label }}]({{ parent.scoped_uri}}) {% if not loop.last %}, {% endif %}
-    {%- endfor %}
-{% endif %}
-**Eigenschappen**<br>
-{% if ((entity.properties | length) > 0 ) %} 
-Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-{%- for prop in entity['properties'] | sort(attribute=sortattr) %}
-<a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
-{%- endfor %}.
-{% else %}
-Voor dit datatype zijn geen eigenschappen gedefinieerd.
-{% endif %}
+    {% for entity in datatypes | sort(attribute=sortattr)%}
+        {% if entity.scopeduri %}
+            <h3 class="vl-title vl-title--h3" id="{{ entity.name }}" >
+                <a href="{{ entity.scopeduri }}" class="--tooltip --tooltip-right" data-content="{{ entity.uri }}">{{ entity.label[language] }}</a>
+            </h3>
+        {% else %}
+        <h3 class="vl-title vl-title--h3" id="{{ entity.name }}">
+            <a href="{{ entity.uri }}" data-toggle="tooltip" data-content="{{ entity.uri }}" data-placement="right">{{ entity.label[language] }}</a>
+        </h3>
+        {% endif %}
 
-{%- if ((entity.properties | length) > 0 ) %} 
-| Eigenschap | Verwacht Type | Kardinaliteit | Beschrijving | Gebruik | Codelijst |
-|------------|---------------|---------------|--------------|---------|-----------|
-{%- for prop in entity['properties'] | sort(attribute=sortattr) %}
-{# 
-| <a id="{{ (entity.name ~ ':' ~ prop.name ) | urlencode }}" href="{{ prop.uri }}" class="--tooltip --tooltip-right" data-content="{{ prop.uri }}">{{ prop.label[language] }}</a> | {% for range in prop.scopedrange %}{% if range['range_uri'] == range['range_puri'] %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% else %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% endif %}{% endfor %} | {{ prop.cardinality }} | {{ prop.description[language] }} | {{ prop.usage[language] | safe }} | {% if prop['codelist_uri'] %}[Link]({{ prop['codelist_uri'] }}){% endif %} | 
-#}
-| test | test | test | test | test | test |
-{%- endfor %}
-{%- endif %}        
+        **Beschrijving**<br>{{ entity.description[language] }}
+        {% if entity.usage[language] %}
+            **Gebruik**<br>{{ entity.usage[language] | safe }}
+        {% endif %}
+        {% if ((entity.parents | length) > 0 ) %} 
+            **Subklasse van <br>
+            {%- for parent in entity['parents'] %}
+                [{{ parent.label }}]({{ parent.scoped_uri}}){% if not loop.last %}, {% endif %}
+            {%- endfor %}
+        {% endif %}
+
+        **Eigenschappen**<br>
+        {% if ((entity.properties | length) > 0 ) %} 
+            Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
+            {%- for prop in entity['properties'] | sort(attribute=sortattr) %}
+                <a href="#{{ (entity.name ~ ':' ~ prop.name) | urlencode }}">{{ prop.label[language] }}</a>{% if not loop.last %}, {% endif %}
+            {%- endfor %}.
+        {% else %}
+            Voor dit datatype zijn geen eigenschappen gedefinieerd.
+        {% endif %}
+
+        {%- if ((entity.properties | length) > 0 ) %} 
+        | Eigenschap | Verwacht Type | Kardinaliteit | Beschrijving | Gebruik | Codelijst |
+        |------------|---------------|---------------|--------------|---------|-----------|
+            {%- for prop in entity['properties'] | sort(attribute=sortattr) %}
+                {# | <a id="{{ (entity.name ~ ':' ~ prop.name ) | urlencode }}" href="{{ prop.uri }}" class="--tooltip --tooltip-right" data-content="{{ prop.uri }}">{{ prop.label[language] }}</a> | {% for range in prop.scopedrange %}{% if range['range_uri'] == range['range_puri'] %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% else %}<a href="{{ range['range_uri'] }}" class="--tooltip --tooltip-right" data-content="{{ range['range_uri'] }}">{{range['range_label'][language]}}</a>{% endif %}{% endfor %} | {{ prop.cardinality }} | {{ prop.description[language] }} | {{ prop.usage[language] | safe }} | {% if prop['codelist_uri'] %}[Link]({{ prop['codelist_uri'] }}){% endif %} | #}
+                | test | test | test | test | test | test |
+            {%- endfor %}
+        {%- endif %}
+    {% endfor %}
+{% endif %}
 {% endblock %}
 
 ## JSON-LD context {{'{#jsonld}'}}
