@@ -35,9 +35,9 @@
       }
     },
     "officieleTalen": {
-      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Aoffici%C3%ABle%20taal"
+      "@id": "#Gemeente%3Aoffici%C3%ABle%20taal"
     },
     "faciliteitenTalen": {
-      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Afaciliteitentaal"
+      "@id": "#Gemeente%3Afaciliteitentaal"
     }
   }
