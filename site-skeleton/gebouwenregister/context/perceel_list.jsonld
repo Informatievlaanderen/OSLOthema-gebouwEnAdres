@@ -16,7 +16,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "perceelStatus": {
-      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.status",
+      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/gebouwenregister#Perceel.status",
       "@type": "@id",
       "@context": {
         "@base": "https://data.vlaanderen.be/id/conceptscheme/perceelstatus"
