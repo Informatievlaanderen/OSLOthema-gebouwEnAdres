@@ -99,13 +99,13 @@
       }
      },
       "adresPositie": {
-        "@id": "https://data.vlaanderen.be/ns/adres#positie",
+        "@id": "https://data.vlaanderen.be/ns/generiek#GeografischePositie",
         "@type": "@id",
         "@context": {
           "positieGeometrieMethode": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode",
           "positieSpecificatie": "https://data.vlaanderen.be/id/conceptscheme/geometriespecificatie",
            "geometrie": {
-               "@id": "https://data.vlaanderen.be/ns/gebouw#Geometrie.geometrie",
+               "@id": "https://www.w3.org/ns/locn#geometry",
                "@context": {
                     "gml": {
                        "@id": "http://www.opengis.net/ont/geosparql#asGML",
