@@ -59,7 +59,7 @@
           }
         },
          "geometrie": {
-           "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.geometrie",
+           "@id": "https://www.w3.org/ns/locn#geometry",
            "@context": {
              "gml": {
               "@id": "http://www.opengis.net/ont/geosparql#asGML",
