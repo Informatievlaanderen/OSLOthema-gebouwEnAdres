@@ -29,6 +29,10 @@
         "@base": "https://data.vlaanderen.be/id/conceptscheme/gebouweenheidfunctie"
       }
     },
+    "afwijkingvastgesteld": {
+        "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/gebouwenregister#afwijkingvastgesteld",
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "gebouw": {
       "@reverse": "https://data.vlaanderen.be/ns/gebouw#bestaatUit",
       "@type": "@id",
