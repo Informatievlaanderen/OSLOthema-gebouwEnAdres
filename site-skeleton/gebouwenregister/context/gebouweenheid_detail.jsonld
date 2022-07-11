@@ -52,7 +52,7 @@
       "@type": "@id",
       "@context": {
         "positieGeometrieMethode": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#methode",
+          "@id": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode",
           "@type": "@id",
           "@context": {
             "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode"
