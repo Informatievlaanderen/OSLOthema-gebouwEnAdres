@@ -23,7 +23,7 @@
       }
     },
     "adressen": {
-      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.adres",
+      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/gebouwenregister#Adresseerbaar%20Object",
       "@type": "@id",
       "@context": {
         "objectId": "@id",
