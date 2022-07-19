@@ -16,7 +16,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "postInfoStatus": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Postinfo.status",
+      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3Astatus",
       "@type": "@id",
       "@context": {
         "@base": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
