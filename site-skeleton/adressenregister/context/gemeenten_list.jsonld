@@ -28,7 +28,7 @@
      }
     },
     "gemeenteStatus": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Gemeente.status",
+      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Astatus",
       "@type": "@id",
       "@context": {
         "@base": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
