@@ -29,7 +29,7 @@
       }
     },
     "postInfoStatus": {
-      "@id": "https://basisregisters.dev-vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3Astatus",
+      "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3Astatus",
       "@type": "@id",
       "@context": {
         "@base": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
