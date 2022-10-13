@@ -22,11 +22,11 @@
         "@base": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
       }
     },
-          "gemeente": {
-        "@id": "http://www.w3.org/ns/prov#wasAttributedTo",
-        "@type": "@id",
-        "@context": {
-          "@base": "https://data.vlaanderen.be/id/gemeente/",
+    "gemeente": {
+      "@id": "http://www.w3.org/ns/prov#wasAttributedTo",
+      "@type": "@id",
+      "@context": {
+      "@base": "https://data.vlaanderen.be/id/gemeente/",
           "objectId": "@id",
           "detail":"http://www.iana.org/assignments/relation/self",
           "gemeentenaam": {
