@@ -1,4 +1,6 @@
 {
+   "@context":
+{
     "@base": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister",
     "@vocab": "#",
     "identificator": "@nest",
@@ -41,3 +43,4 @@
       "@id": "//basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Afaciliteitentaal"
     }
   }
+}
