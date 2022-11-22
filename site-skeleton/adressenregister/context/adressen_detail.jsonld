@@ -123,11 +123,13 @@
                     "gml": {
                        "@id": "http://www.opengis.net/ont/geosparql#asGML",
                        "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
-                    },
-                    "type": "@type"
-        }
-       }          
-      }
-     }
+                           },
+                    "type": {
+                       "@id": "http://www.opengis.net/ont/sf#Point"
+                            }
+                           }
+                        }          
+                   }
+                        }
     }
 }
