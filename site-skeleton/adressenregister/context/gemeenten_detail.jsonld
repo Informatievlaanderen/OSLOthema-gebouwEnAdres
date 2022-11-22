@@ -32,7 +32,7 @@
       "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Astatus",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
+        "@base": "https://data.vlaanderen.be/doc/concept/gemeentestatus/"
       }
     },
     "officieleTalen": {
