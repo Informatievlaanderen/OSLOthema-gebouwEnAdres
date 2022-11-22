@@ -49,7 +49,7 @@
           "@id": "https://data.vlaanderen.be/ns/gebouw#methode",
           "@type": "@id",
           "@context": {
-            "@base": "https://data.vlaanderen.be/doc/conceptscheme/2Dgeometriemethode"
+            "@base": "https://data.vlaanderen.be/doc/concept/2Dgeometriemethode/"
           }
         },
         "geometrie": {
