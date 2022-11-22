@@ -107,14 +107,14 @@
             "@id": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode",
             "@type": "@id",
             "@context": {
-              "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriemethode"
+              "@base": "https://data.vlaanderen.be/doc/concept/geometriemethode/"
             }
           },
           "positieSpecificatie": {
             "@id": "https://data.vlaanderen.be/id/conceptscheme/geometriespecificatie",
             "@type": "@id",
             "@context": {
-              "@base": "https://data.vlaanderen.be/id/conceptscheme/geometriespecificatie"
+              "@base": "https://data.vlaanderen.be/doc/concept/geometriespecificatie/"
             }
           },
           "geometrie": {
