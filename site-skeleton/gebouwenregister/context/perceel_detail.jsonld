@@ -20,7 +20,7 @@
       "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/gebouwenregister#Perceel%3Astatus",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/perceelstatus"
+        "@base": "https://data.vlaanderen.be/doc/concept/perceelstatus/"
       }
     },
     "adressen": {
