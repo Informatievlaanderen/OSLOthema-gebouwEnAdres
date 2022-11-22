@@ -33,7 +33,7 @@
       "@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3Astatus",
       "@type": "@id",
       "@context": {
-        "@base": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
+        "@base": "https://data.vlaanderen.be/doc/concept/postinfostatus/"
       }
     },
     "detail": "http://www.iana.org/assignments/relation/self",
