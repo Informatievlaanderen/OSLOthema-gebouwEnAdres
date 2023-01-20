@@ -59,12 +59,10 @@
               "@id": "http://www.opengis.net/ont/geosparql#asGML",
               "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
             },
-            "type": {
-               "@id": "http://www.opengis.net/ont/sf#Polygon"
-                    }
+            "type": "@type",
+            "@vocab": "http://www.opengis.net/ont/sf#"
                       }
                      }
-                  }
                      }
-    }
+                     }
 }
