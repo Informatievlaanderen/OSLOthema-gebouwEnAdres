@@ -28,7 +28,13 @@
       "@type": "@id",
       "@context": {
         "objectId": "@id",
-         "detail": "http://www.iana.org/assignments/relation/self",
+		"status": {
+			"@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
+			"@type": "@id",
+			"@context": {
+			"@base": "https://data.vlaanderen.be/doc/concept/gebouweenheidstatus/"
+		},
+        "detail": "http://www.iana.org/assignments/relation/self",
         "@base": "https://data.vlaanderen.be/id/gebouweenheid/"
       }
     },
@@ -67,3 +73,4 @@
                      }
 }
 }
+
