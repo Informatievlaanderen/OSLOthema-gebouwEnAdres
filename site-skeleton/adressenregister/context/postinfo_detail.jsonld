@@ -55,6 +55,10 @@
           }
         }
       }
-    }
+    },
+	"nuts3": {
+		"@id": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#nuts3",
+		"@type": "http://www.w3.org/2001/XMLSchema#string"
+	}
   }
 }
