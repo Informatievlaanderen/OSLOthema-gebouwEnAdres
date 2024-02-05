@@ -21,7 +21,6 @@
     a skos:Concept ;
     skos:definition "De straatnaam werd formeel goedgekeurd door de gemeenteraad." ;
     skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus> ;
-    
     skos:prefLabel "in gebruik" ;
     skos:relatedMatch <https://inspire.ec.europa.eu/codelist/StatusValue/current> ;
     skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus> .
@@ -35,3 +34,9 @@
     skos:relatedMatch <https://inspire.ec.europa.eu/codelist/StatusValue/proposed> ;
     skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus> .
 
+<https://data.vlaanderen.be/id/concept/straatnaamstatus/afgekeurd>
+    a skos:Concept ;
+    skos:definition "Wanneer de gemeenteraad een voorgestelde straatnaam afkeurt na een openbaar onderzoek, dan wordt deze straatnaam door de beheerder afgekeurd." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus> ;
+    skos:prefLabel "afgekeurd" ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus> .
