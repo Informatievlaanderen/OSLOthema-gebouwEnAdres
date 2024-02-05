@@ -27,6 +27,17 @@
         "@id": "https://data.vlaanderen.be/ns/adres#huisnummer",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
+
+      "huisnummerObject": {
+        "@id": "https://data.vlaanderen.be/ns/adres#heeftHuisnummer",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/adres/",
+          "objectId": "@id",
+          "detail": "http://www.iana.org/assignments/relation/self"
+        }
+      },
+       
       "busnummer": {
         "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
         "@type": "http://www.w3.org/2001/XMLSchema#string"
