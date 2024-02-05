@@ -28,7 +28,7 @@
         "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
       "huisnummerObject": {
-        "@id": "https://data.vlaanderen.be/ns/adres#isDeelVanHuisnummer",
+        "@id": "https://data.vlaanderen.be/ns/adres#isDeelVan",
         "@type": "@id",
         "@context": {
           "@base": "https://data.vlaanderen.be/id/adres/",
