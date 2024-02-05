@@ -30,3 +30,10 @@
     skos:relatedMatch <https://inspire.ec.europa.eu/codelist/StatusValue/proposed> ;
     skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/adresstatus> .
 
+<https://data.vlaanderen.be/id/concept/adresstatus/afgekeurd>
+    a skos:Concept ;
+    skos:definition "Wanneer het adres werd ingevoerd nog vóór er een vergunning met voorstel tot adressering werd verleend door de gemeenteraad en uiteindelijk besluit de gemeenteraad dit adres niet goed te keuren, dan wordt dit adres door de beheerder afgekeurd." ;
+    skos:inscheme <https://data.vlaanderen.be/id/conceptscheme/adresstatus> ;
+    skos:prefLabel "afgekeurd" ;
+    skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/adresstatus> .
+
