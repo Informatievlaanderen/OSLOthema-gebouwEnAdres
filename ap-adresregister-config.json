@@ -3,7 +3,7 @@
   "rapport": "https://raw.githubusercontent.com/Informatievlaanderen/OSLO-Generated/test/report/doc/applicatieprofiel/adressenregister/ontwerpdocument/niet-bepaald/adressenregister.jsonld",
   "verantwoordelijke_organisatie": "Agentschap Digitaal Vlaanderen",
   "identificator_organisatie": "https://data.vlaanderen.be/id/organisatie/OVO002949",
-  "publicatiedatum": "TBD",
+  "publicatiedatum": "2019-12-10",
   "type_toepassing": "Aanbevolen (vrijwillig)",
   "categorie": "Applicatieprofiel",
   "beschrijving": "ap-adresregister.md",
