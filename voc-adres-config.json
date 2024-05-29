@@ -1,48 +1,51 @@
 {
-  "naam": "Vocabularium Adres",
-  "rapport": "https://raw.githubusercontent.com/Informatievlaanderen/OSLO-Generated/test/report/doc/vocabularium/adres/ontwerpdocument/2020-01-06/adres.jsonld",
-  "verantwoordelijke_organisatie": "Agentschap Digitaal Vlaanderen",
-  "identificator_organisatie": "https://data.vlaanderen.be/id/organisatie/OVO002949",
-  "publicatiedatum": "2018-07-03",
-  "type_toepassing": "Aanbevolen (vrijwillig)",
-  "categorie": "Vocabularium",
-  "beschrijving": "voc-adres.md",
-  "specificatiedocument": [
+  "title": "Vocabularium Adres",
+  "category": "Vocabularium",
+  "usage": "Aanbevolen (vrijwillig)",
+  "status": "erkende-standaard",
+  "descriptionFileName": "voc-adres.md",
+  "responsibleOrganisation": [
     {
-      "naam": "Vocabularium Adres",
-      "waarde": "https://data.vlaanderen.be/ns/adres"
+      "name": "Agentschap Digitaal Vlaanderen",
+      "resourceReference": "https://data.vlaanderen.be/id/organisatie/OVO002949"
     }
   ],
-  "documentatie": [],
-  "charter": [
+  "publicationDate": "2018-07-03",
+  "specificationDocuments": [
     {
-      "naam": "Werkgroep Charter - Adres",
-      "waarde": "Werkgroep Charter - OSLO Adres.docx"
+      "name": "Vocabularium Adres",
+      "resourceReference": "https://data.vlaanderen.be/ns/adres"
     }
   ],
-  "verslagen": [
+  "documentation": [],
+  "reports": [
     {
-      "naam": "Thematische werkgroep Adres & Gebouw",
-      "waarde": "https://drive.google.com/open?id=1DqNqZhsDQTxdw0J-ngF54PEz-7mldvyVsRh9v6CYQJs"
+      "name": "Thematische werkgroep Adres & Gebouw",
+      "resourceReference": "https://drive.google.com/open?id=1DqNqZhsDQTxdw0J-ngF54PEz-7mldvyVsRh9v6CYQJs"
     },
     {
-      "naam" : "Verslag thematische werkgroep Adres & Gebouw",
-      "waarde" : "https://drive.google.com/open?id=1WWX-cQJUVJOIvz2JpKvcOdy94wXxotg-IGz1ZJCXLbU"
+      "name": "Verslag thematische werkgroep Adres & Gebouw",
+      "resourceReference": "https://drive.google.com/open?id=1WWX-cQJUVJOIvz2JpKvcOdy94wXxotg-IGz1ZJCXLbU"
     }
   ],
-  "presentaties": [
+  "charter": {
+    "name": "Werkgroep Charter - Adres",
+    "resourceReference": "https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/standaardenregister/charter/Werkgroep Charter - OSLO Adres.docx"
+  },
+  "presentations": [
     {
-      "naam" : "Webcast OSLO-Adres 2018-05-04 - Presentatie (PDF)",
-      "waarde" : "https://drive.google.com/open?id=17-McEa5pz73Tg2xyb-_GEmBcbLgDvx_L"
+      "name": "Webcast OSLO-Adres 2018-05-04 - Presentatie (PDF)",
+      "resourceReference": "https://drive.google.com/open?id=17-McEa5pz73Tg2xyb-_GEmBcbLgDvx_L"
     },
     {
-      "naam" : "Webcast OSLO-Adres 2018-05-04",
-      "waarde" : "https://drive.google.com/open?id=1aLjUVsW_QoSR48CpRrwUOZ64wn4iOsac"
+      "name": "Webcast OSLO-Adres 2018-05-04",
+      "resourceReference": "https://drive.google.com/open?id=1aLjUVsW_QoSR48CpRrwUOZ64wn4iOsac"
     }
   ],
-  "functioneel_toepassingsgebied": "Semantische standaard voor informatie m.b.t. adressen",
-  "organisatorisch_werkingsgebied": "alle entiteiten van de Vlaamse overheid",
-  "datum_van_aanmelding": "10 April 2018 (retroactief)",
-  "erkenning_werkgroep_datastandaarden": "29 Mei 2018",
-  "erkenning_stuurgroep": "03 Juli 2018"
+  "dateOfRegistration": "10 April 2018 (retroactief)",
+  "dateOfAcknowledgementByWorkingGroup": "29 Mei 2018",
+  "dateOfAcknowledgementBySteeringCommittee": "03 Juli 2018",
+  "repository": "OSLOthema-gebouwEnAdres",
+  "datePublicReviewStart": "",
+  "endOfPublicationDate": ""
 }
