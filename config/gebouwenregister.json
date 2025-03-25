@@ -2,7 +2,7 @@
   {
     "name": "gebouwenregister",
     "type": "ap",
-    "eap": "OSLO-Gebouwenregister-AP.eap",
+    "eap": "OSLO-Gebouwenregister-AP2.eap",
     "diagram": "OSLO-Gebouw_applicatieprofiel_gebouwregister",
     "template": "gebouwenregister-ap.j2",
     "title": "Gebouwenregister",
