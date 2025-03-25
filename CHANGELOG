@@ -6,3 +6,9 @@
    toolchain 4 aanpassingen
    Adresregister EAP: 
       - verhuis de tags van de associatie naar de rol op de associatie
+   Gebouwenregister:
+      - gebruik de EAP die het oorspronkelijke kandidaat bevat.
+        De EAP  OSLO-Gebouwenregister-AP.eap bevat enkel een diagramma implementatiemodel.
+        advies is om een gesprek aan te gaan met het register en dit uit te klaren en juist te zetten.
+
+
