@@ -2,7 +2,7 @@
   "title": "Applicatieprofiel Adresregister",
   "category": "Applicatieprofiel",
   "usage": "Aanbevolen (vrijwillig)",
-  "status": "kandidaat-standaard",
+  "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
   "descriptionFileName": "ap-adresregister.md",
   "responsibleOrganisation": [
     {
