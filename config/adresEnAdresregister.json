@@ -2,7 +2,7 @@
     {
       "name": "adressenregister",
       "type": "ap",
-      "eap": "OSLO-Adresregister-AP.eap",
+      "eap": "OSLO-Adres.eap",
       "diagram": "OSLO-Adresregister",
       "template": "adresregister-ap.j2",
       "title": "Adressenregister",
@@ -21,5 +21,20 @@
           "packageurl": "https://otl-test.data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpdocument/07-02-2018/"
         }
       ]
-    }
-  ]
+    },
+    {
+    "name": "adres",
+    "type": "voc",
+    "eap": "OSLO-Adres.eap",
+    "diagram": "OSLO-Adresregister",
+    "template": "adres-voc.j2",
+    "title": "Adres",
+    "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/Standaard",
+    "publication-date": "2018-07-03",
+    "contributors-file": "stakeholders.csv",
+    "contributors-column": "Adres",
+    "site": "site-skeleton/adres",
+    "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-adres/"
+  }
+]
