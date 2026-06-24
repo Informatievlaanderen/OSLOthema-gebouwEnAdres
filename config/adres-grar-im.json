@@ -1,6 +1,6 @@
   [
     {
-      "name": "adressenregister",
+      "name": "adres-im",
       "type": "impl",
       "eap": "OSLO-Adresregister-implementatiemodel.eap",
       "diagram": "GRAR-Adresregister",
@@ -15,7 +15,7 @@
       "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion"
     },
     {
-    "name": "adres",
+    "name": "adres-im-voc",
     "prefix": "grar",
     "type": "voc",
     "eap": "OSLO-Adresregister-implementatiemodel.eap",
