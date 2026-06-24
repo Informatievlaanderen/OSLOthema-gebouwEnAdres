@@ -1,0 +1,33 @@
+  [
+    {
+      "name": "adressenregister",
+      "type": "impl",
+      "eap": "OSLO-Adresregister-implementatiemodel.eap",
+      "diagram": "GRAR-Adresregister",
+      "template": "adresregister-im.j2",
+      "title": "GRAR-Adres Implementatiemodel",
+      "license" : "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+      "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+      "publication-date": "niet-bepaald",
+      "contributors-file": "stakeholders.csv",
+      "contributors-column": "Adres",
+      "site": "site-skeleton/adres-IM",
+      "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion"
+    },
+    {
+    "name": "adres",
+    "prefix": "grar",
+    "type": "voc",
+    "eap": "OSLO-Adresregister-implementatiemodel.eap",
+    "diagram": "OSLO-Adresregister-implementatiemodel.eap",
+    "template": "adres-voc-im.j2",
+    "title": "GRAR-Adres Vocabularium",
+    "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/Standaard",
+    "publication-date": "2018-07-03",
+    "contributors-file": "stakeholders.csv",
+    "contributors-column": "Adres",
+    "site": "site-skeleton/adres-IM",
+    "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-adres/"
+  }
+]
