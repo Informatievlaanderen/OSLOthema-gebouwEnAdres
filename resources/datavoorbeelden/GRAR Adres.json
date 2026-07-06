@@ -56,8 +56,6 @@
 
 },
 
-
-"huisnummer":"42",
 "heeftHuisnummer":
 {
     "@type":"Huisnummer",
@@ -96,8 +94,7 @@
     "@type": "Links",
     "zieOokself":"https://api.basisregisters.vlaanderen.be/v2/adressen/60",
     "zieOokgebouweenheden":"https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?adresobjectid=60",
-    "zieOokpercelen":"https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"
-       
+    "zieOokpercelen":"https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"       
 
 } 
 }
