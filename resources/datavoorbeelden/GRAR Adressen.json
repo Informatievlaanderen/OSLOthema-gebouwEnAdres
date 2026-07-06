@@ -1,0 +1,67 @@
+
+{
+    "@context": "https://docs.basisregisters.vlaanderen.be/context/adres/2023-02-28/adres_detail.jsonld",
+    "@type": "DataEnvelopAdres",
+    "adressen":
+    [
+        {
+           "@type": "Adres",
+            "@id":"https://data.vlaanderen.be/id/adres/10521",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"10521",
+                    "naamruimte": "https://data.vlaanderen.be/id/adres",
+                    "versieIdentificator":"2026-07-06T07:49:53+02:00"
+                }
+    
+            },
+            "zieOok": "https://api.basisregisters.vlaanderen.be/v2/adressen/10521",
+            "huisnummer": "70",
+            "isVerrijktMet":
+            {
+                "@type":"Adresuitbreiding",
+                "volledigAdres":
+                {
+                    "spelling": "Teststraat 42 bus 5B, 9000 Gent",
+                    "taal": "nl"
+                }
+            },
+            "status":"voorgesteld"
+        },
+        {
+           "@type": "Adres",
+            "@id":"https://data.vlaanderen.be/id/adres/14874",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"14874",
+                    "naamruimte": "https://data.vlaanderen.be/id/adres",
+                    "versieIdentificator":"2026-07-04T07:49:53+02:00"
+                }
+    
+            },
+            "zieOok": "https://api.basisregisters.vlaanderen.be/v2/adressen/14874",
+            "huisnummer": "70",
+            "busnummer": "30",
+            "isVerrijktMet":
+            {
+                "@type":"Adresuitbreiding",
+                "volledigAdres":
+                {
+                    "spelling": "Boudewijnlaan 30 bus 30, 1000 Brussel",
+                    "taal": "nl"
+                }
+            },
+            "status":"inGebruik"
+        }
+
+    ],
+    "volgende":"https://api.basisregisters.vlaanderen.be/v2/adressen?offset=2&limit=10"
+
+}
+
