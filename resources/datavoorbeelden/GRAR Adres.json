@@ -1,0 +1,107 @@
+{
+
+    "@context": "https://docs.basisregisters.vlaanderen.be/context/adres/2023-02-28/adres_detail.jsonld",
+    "@type": "Adres",
+    "@id":"https://data.vlaanderen.be/id/adres/60",
+    "identificator": {
+    "@type":"Identificator",
+    "gestructureerdeIdentificator": 
+    {
+        "@type": "GestructureerdeIdentificator",
+        "lokaleIdentificator":"60",
+        "naamruimte": "https://data.vlaanderen.be/id/adres",
+        "versieIdentificator":"2026-07-06T07:49:53+02:00"
+    }
+    
+},
+
+"heeftGemeentenaam": 
+{
+    "@type":"Gemeentenaam",
+    "@id":  "https://data.vlaanderen.be/id/gemeente/9000",
+    "zieOok": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/9000",
+    "gemeentenaam": 
+    {
+        "@type":"GeografischeNaam",
+        "spelling": "Gent",
+        "taal": "nl"
+    }
+    
+
+},
+
+"heeftPostinfo": 
+{
+    "@type":"Postinfo",
+    "@id": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/9000",
+    "zieOok": "https://api.basisregisters.vlaanderen.be/v2/postinfo/9000"
+
+},
+"heeftStraatnaam": 
+{
+    "@type":"Straatnaam",
+    "@id": "https://data.vlaanderen.be/id/straatnaam/748",
+    "zieOok": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/748",
+    "straatnaam": 
+    {
+        "@type":"GeografischeNaam",
+        "spelling": "Teststraat",
+        "taal": "nl"
+    },
+    "homoniemToevoeging":
+    {
+        "spelling": "UK",
+        "taal": "nl"
+    }
+
+},
+
+
+"huisnummer":"42",
+"heeftHuisnummer":
+{
+    "@type":"Huisnummer",
+    "@id":"https://data.vlaanderen.be/id/adres/59",
+    "huisnummer":"42",
+    "zieOok":"https://api.basisregisters.vlaanderen.be/v2/adressen/59"
+},
+"busnummer": "5B",
+"isVerrijktMet":
+{
+    "@type":"Adresuitbreiding",
+    "volledigAdres":
+    {
+        "spelling": "Teststraat 42 bus 5B, 9000 Gent",
+        "taal": "nl"
+    }
+},
+"positie":
+{
+    "@type":"GeografischePositie",
+    "geometrie":
+    {
+        "@type":"Punt",
+        "gml":"<gml:Point srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:pos>140252.76 198794.27</gml:pos></gml:Point>"
+    },
+    "methode":"aangeduidDoorBeheerder",
+    "specificatie": "gebouw"
+
+},
+"status":"inGebruik",
+"officieelToegekend": true,
+
+
+"_links":
+{
+    "@type": "Links",
+    "zieOokself":"https://api.basisregisters.vlaanderen.be/v2/adressen/60",
+    "zieOokgebouweenheden":"https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?adresobjectid=60",
+    "zieOokpercelen":"https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"
+       
+
+} 
+}
+
+
+
+
