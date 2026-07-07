@@ -1,0 +1,53 @@
+
+{
+    "@context": "example.com",
+    "@type": "DataEnvelop",
+    "data":
+      {
+        "@type":"Straatnaam",
+        "@id":"https://data.vlaanderen.be/id/straatnaam/12461",
+        "identificator": {
+          "@type":"Identificator",
+          "gestructureerdeIdentificator": 
+          {
+            "@type": "GestructureerdeIdentificator",
+            "lokaleIdentificator":"12461",
+            "naamruimte": "https://data.vlaanderen.be/id/straatnaam",
+            "versieIdentificator":"2026-07-06T07:49:53+02:00"
+          }
+        },
+        "isToegekendDoor":
+        {
+            "@type":"Gemeente",
+            "@id":"https://data.vlaanderen.be/id/gemeente/31005",
+            "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
+            "naam":
+            {
+                "@type":"Gemeentenaam",
+                "gemeentenaam":
+                {
+                    "@value": "Brugge",
+                    "@language": "nl"
+                }
+            }
+        },
+        "straatnaam":
+        {
+           "@value": "Baliestraat",
+            "@language": "nl" 
+        },
+        "status":
+        { 
+            "@id": "https://data.vlaanderen.be/id/concept/straatnaamstatus/inGebruik",
+            "@type": "skos:Concept",
+            "skos:prefLabel": "inGebruik"
+        }
+      },
+
+    "_links":
+    {
+    "@type": "Links",
+    "detailSelf": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/12461",
+    "detailAdressen": "https://api.basisregisters.vlaanderen.be/v2/adressen?straatnaamobjectid=12461"
+    }
+}
