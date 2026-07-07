@@ -8,7 +8,8 @@
         "identificator": 
         {
             "@type":"Identificator",
-            "gestructureerdeIdentificator":{
+            "gestructureerdeIdentificator":
+            {
                 "@type": "GestructureerdeIdentificator",
                 "lokaleIdentificator":"8200",
                 "naamruimte": "https://data.vlaanderen.be/id/postinfo",
@@ -43,7 +44,7 @@
         ],
         "status":
         { 
-            "@id": "https://data.vlaanderen.be/id/concept/adresstatus/gerealiseerd",
+            "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
             "@type": "skos:Concept",
             "skos:prefLabel": "gerealiseerd"
         },

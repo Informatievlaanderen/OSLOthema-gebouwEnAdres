@@ -1,0 +1,71 @@
+
+{
+    "@context": "example.com",
+    "@type": "DataEnvelop",
+    "data":
+    [
+        {
+           "@type":"Postinfo",
+            "@id":"https://data.vlaanderen.be/id/postinfo/9000",
+            "identificator": 
+            {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator":
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"9000",
+                    "naamruimte": "https://data.vlaanderen.be/id/postinfo",
+                    "versieIdentificator":"2026-07-06T07:49:53+02:00"
+                }
+            }, 
+            "detail":"https://api.basisregisters.vlaanderen.be/v2/postinfo/9000",
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gerealiseerd"
+            },
+            "postnaam":
+            [
+                {
+                    "@value": "Gent",
+                    "@language": "nl"
+                }
+            ]
+        },
+        {
+            "@type":"Postinfo",
+            "@id":"https://data.vlaanderen.be/id/postinfo/9140",
+            "identificator": 
+            {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator":
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"9140",
+                    "naamruimte": "https://data.vlaanderen.be/id/postinfo",
+                    "versieIdentificator":"2026-07-06T07:49:53+02:00"
+                }
+            }, 
+            "detail":"https://api.basisregisters.vlaanderen.be/v2/postinfo/9140",
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gerealiseerd"
+            },
+            "postnaam":
+            [
+                {
+                    "@value": "Temse",
+                    "@language": "nl"
+                }
+            ]
+        
+        }
+
+    ],
+    "volgende": "https://api.basisregisters.vlaanderen.be/v2/postinfo?offset=2&limit=10"
+
+}
+
