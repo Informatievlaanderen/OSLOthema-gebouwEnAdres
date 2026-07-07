@@ -98,11 +98,11 @@
     }
 },
 "status":
-            { 
-                "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "inGebruik"
-            },
+{ 
+    "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
+    "@type": "skos:Concept",
+    "skos:prefLabel": "inGebruik"
+},
 "officieelToegekend": true
         },
 
