@@ -1,0 +1,68 @@
+{
+    "@context": "example.com",
+    "@type": "DataEnvelop",
+    "data":[
+        {
+            "@type":"Gemeente",
+            "@id":"https://data.vlaanderen.be/id/gemeente/31005",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"31005",
+                    "naamruimte": "https://data.vlaanderen.be/id/gemeente",
+                    "versieIdentificator":"2026-07-06T07:49:53+02:00"
+                }
+            },
+            "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
+            "naam":
+            {
+                "gemeentenaam":
+                {
+                    "@value": "Brugge",
+                    "@language": "nl"
+                }
+            },
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "inGebruik"
+            }
+            
+        },
+        {
+            "@type":"Gemeente",
+            "@id":"https://data.vlaanderen.be/id/gemeente/53084",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"53084",
+                    "naamruimte": "https://data.vlaanderen.be/id/gemeente",
+                    "versieIdentificator":"2026-07-06T07:49:53+02:00"
+                }
+            },
+            "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/53084",
+            "naam":
+            {
+                "gemeentenaam":
+                {
+                    "@value": "Quévy",
+                    "@language": "fr"
+                }
+            },
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/adresstatus/gehistoreerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gehistoreerd"
+            }
+            
+        }
+
+    ],
+    "volgende":"https://api.basisregisters.vlaanderen.be/v2/gemeenten?offset=2&limit=10"
+}
