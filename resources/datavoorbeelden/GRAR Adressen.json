@@ -1,8 +1,8 @@
 
 {
-    "@context": "https://docs.basisregisters.vlaanderen.be/context/adres/2023-02-28/adres_detail.jsonld",
-    "@type": "DataEnvelopAdres",
-    "adressen":
+    "@context": "example.com",
+    "@type": "DataEnvelop",
+    "data":
     [
         {
            "@type": "Adres",
@@ -18,18 +18,24 @@
                 }
     
             },
-            "zieOok": "https://api.basisregisters.vlaanderen.be/v2/adressen/10521",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/10521",
             "huisnummer": "70",
             "isVerrijktMet":
             {
                 "@type":"Adresuitbreiding",
                 "volledigAdres":
                 {
-                    "spelling": "Teststraat 42 bus 5B, 9000 Gent",
-                    "taal": "nl"
+                    "@value": "Teststraat 42 bus 5B, 9000 Gent",
+                    "@language": "nl"
                 }
             },
-            "status":"voorgesteld"
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/adresstatus/voorgesteld",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "voorgesteld"
+            }
+
         },
         {
            "@type": "Adres",
@@ -45,7 +51,7 @@
                 }
     
             },
-            "zieOok": "https://api.basisregisters.vlaanderen.be/v2/adressen/14874",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/14874",
             "huisnummer": "70",
             "busnummer": "30",
             "isVerrijktMet":
@@ -53,11 +59,16 @@
                 "@type":"Adresuitbreiding",
                 "volledigAdres":
                 {
-                    "spelling": "Boudewijnlaan 30 bus 30, 1000 Brussel",
-                    "taal": "nl"
+                    "@value": "Boudewijnlaan 30 bus 30, 1000 Brussel",
+                    "@language": "nl"
                 }
             },
-            "status":"inGebruik"
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "inGebruik"
+            }
         }
 
     ],

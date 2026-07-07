@@ -1,60 +1,86 @@
+
 {
-  "@context": "https://docs.basisregisters.vlaanderen.be/context/gemeente/2023-02-28/gemeente_detail.jsonld",
-  "@type": "Gemeente",
-  "identificator": [
-    {
-        "@type":"Identificator",
-        "gestructureerdeIdentificator": {
+    "@context": "https://docs.basisregisters.vlaanderen.be/context/adres/2023-02-28/adres_detail.jsonld",
+    "@type": "DataEnvelop",
+    "data":
+    [
+      {
+        "@type":"Gemeente",
+        "@id":"https://data.vlaanderen.be/id/gemeente/31005",
+        "identificator": {
+          "@type":"Identificator",
+          "gestructureerdeIdentificator": 
+          {
             "@type": "GestructureerdeIdentificator",
             "lokaleIdentificator":"31005",
             "naamruimte": "https://data.vlaanderen.be/id/gemeente",
-            "versieIdentificator": "2026-07-03T13:18:47+02:00"
+            "versieIdentificator":"2026-07-06T07:49:53+02:00"
+          }
         },
-        "toegekendDoor": { "@id":"https://data.vlaanderen.be/id/organisatie/OVO054890"},
-        "identificator": "https://data.vlaanderen.be/id/gemeente/31005"
-    }
-
-  ],
-
-
-  
-  "officieleTaal": [
-    "nl"
-  ],
-  "faciliteitenTaal": [
-    "fr"
-  ],
-  "heefftgemeentenaam": [
-    {
-        "@type":"Gemeentenaam",
-        "gemeentenaam": [
+        "officieleTaal": "nl",
+        "faciliteitenTaal":"fr",
+        "naam":
+        {
+          "@type":"Gemeentenaam",
+          "gemeentenaam":[
             {
-
+              "@value": "Brugge",
+              "@language": "nl"
             },
             {
-                
+              "@value": "Bruges",
+              "@language": "fr"
+            },
+            {
+              "@value": "Brügge",
+              "@language": "de"
+            },
+            {
+              "@value": "Bruges",
+              "@language": "en"
             }
+          ]
 
-        ],
-    }
+        }
+
+      }
+    ]
+},
 
 
 
+
+{
+  "@context": "https://docs.basisregisters.vlaanderen.be/context/gemeente/2023-02-28/gemeente_detail.jsonld",
+  "@type": "Gemeente",
+  "identificator": {
+    "id": "https://data.vlaanderen.be/id/gemeente/31005",
+    "naamruimte": "https://data.vlaanderen.be/id/gemeente",
+    "objectId": "31005",
+    "versieId": "2026-07-06T07:49:53+02:00"
+  },
+  "officieleTalen": [
+    "nl"
+  ],
+  "faciliteitenTalen": [
+    "fr"
+  ],
+  "gemeentenamen": [
     {
-      "spelling": "Brugge",
-      "taal": "nl"
+      "@value": "Brugge",
+      "@language": "nl"
     },
     {
-      "spelling": "Bruges",
-      "taal": "fr"
+      "@value": "Bruges",
+      "@language": "fr"
     },
     {
-      "spelling": "Brügge",
-      "taal": "de"
+      "@value": "Brügge",
+      "@language": "de"
     },
     {
-      "spelling": "Bruges",
-      "taal": "en"
+      "@value": "Bruges",
+      "@language": "en"
     }
   ],
   "gemeenteStatus": "inGebruik",

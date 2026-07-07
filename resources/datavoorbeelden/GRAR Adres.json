@@ -1,6 +1,8 @@
 {
 
-    "@context": "https://docs.basisregisters.vlaanderen.be/context/adres/2023-02-28/adres_detail.jsonld",
+    "@context": "example.com",
+    "@type":"DataEnvelop",
+    "data":{
     "@type": "Adres",
     "@id":"https://data.vlaanderen.be/id/adres/60",
     "identificator": {
@@ -17,14 +19,16 @@
 
 "heeftGemeentenaam": 
 {
-    "@type":"Gemeentenaam",
-    "@id":  "https://data.vlaanderen.be/id/gemeente/9000",
-    "zieOok": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/9000",
+    "@type":"Gemeentenaam",    
     "gemeentenaam": 
     {
-        "@type":"GeografischeNaam",
-        "spelling": "Gent",
-        "taal": "nl"
+        "@value": "Gent",
+        "@language": "nl"
+    },
+    "isafgeleidVan":{
+        "@id":  "https://data.vlaanderen.be/id/gemeente/44021",
+        "detail": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/44021"
+
     }
     
 
@@ -33,35 +37,34 @@
 "heeftPostinfo": 
 {
     "@type":"Postinfo",
-    "@id": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/9000",
-    "zieOok": "https://api.basisregisters.vlaanderen.be/v2/postinfo/9000"
+    "@id": "https://data.vlaanderen.be/id/postinfo/9000",
+    "detail": "https://api.basisregisters.vlaanderen.be/v2/postinfo/9000"
 
 },
 "heeftStraatnaam": 
 {
     "@type":"Straatnaam",
     "@id": "https://data.vlaanderen.be/id/straatnaam/748",
-    "zieOok": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/748",
-    "straatnaam": 
+    "detail": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/748",
+    "straatnaam":
     {
-        "@type":"GeografischeNaam",
-        "spelling": "Teststraat",
-        "taal": "nl"
+        "@value": "Teststraat",
+        "@language": "nl"
     },
     "homoniemToevoeging":
     {
-        "spelling": "UK",
-        "taal": "nl"
+        "@value": "UK",
+        "@language": "nl"
     }
 
 },
+"huisnummer":"42",
 
-"heeftHuisnummer":
+"isDeelVan":
 {
-    "@type":"Huisnummer",
-    "@id":"https://data.vlaanderen.be/id/adres/59",
-    "huisnummer":"42",
-    "zieOok":"https://api.basisregisters.vlaanderen.be/v2/adressen/59"
+    "@type":"Referentie",
+    "@id":"https://data.vlaanderen.be/id/adres/59",    
+    "detail":"https://api.basisregisters.vlaanderen.be/v2/adressen/59"
 },
 "busnummer": "5B",
 "isVerrijktMet":
@@ -69,8 +72,8 @@
     "@type":"Adresuitbreiding",
     "volledigAdres":
     {
-        "spelling": "Teststraat 42 bus 5B, 9000 Gent",
-        "taal": "nl"
+        "@value": "Teststraat 42 bus 5B, 9000 Gent",
+        "@language": "nl"
     }
 },
 "positie":
@@ -81,20 +84,35 @@
         "@type":"Punt",
         "gml":"<gml:Point srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:pos>140252.76 198794.27</gml:pos></gml:Point>"
     },
-    "methode":"aangeduidDoorBeheerder",
-    "specificatie": "gebouw"
-
+    "methode":
+    { 
+        "@id": "https://data.vlaanderen.be/id/concept/geometriemethode/aangeduidDoorBeheerder",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "aangeduidDoorBeheerder"
+    },
+    "specificatie":
+    {
+        "@id": "https://data.vlaanderen.be/id/concept/geometriespecificatie/gebouweenheid",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "gebouweenheid"
+    }
 },
-"status":"inGebruik",
-"officieelToegekend": true,
+"status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "inGebruik"
+            },
+"officieelToegekend": true
+        },
 
 
 "_links":
 {
     "@type": "Links",
-    "zieOokself":"https://api.basisregisters.vlaanderen.be/v2/adressen/60",
-    "zieOokgebouweenheden":"https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?adresobjectid=60",
-    "zieOokpercelen":"https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"       
+    "detailSelf":"https://api.basisregisters.vlaanderen.be/v2/adressen/60",
+    "detailGebouweenheden":"https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?adresobjectid=60",
+    "detailPercelen":"https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"       
 
 } 
 }
