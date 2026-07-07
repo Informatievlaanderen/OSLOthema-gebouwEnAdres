@@ -1,0 +1,59 @@
+{
+    "@context": "example.com",
+    "@type": "DataEnvelop",
+    "data":
+    {
+        "@type":"Postinfo",
+        "@id":"https://data.vlaanderen.be/id/postinfo/8200",
+        "identificator": 
+        {
+            "@type":"Identificator",
+            "gestructureerdeIdentificator":{
+                "@type": "GestructureerdeIdentificator",
+                "lokaleIdentificator":"8200",
+                "naamruimte": "https://data.vlaanderen.be/id/postinfo",
+                "versieIdentificator":"2026-07-06T07:49:53+02:00"
+            }
+        },
+        "isToegekendAan":
+        {
+            "@type":"Gemeente",
+            "@id":"https://data.vlaanderen.be/id/gemeente/31005",
+            "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
+            "naam":
+            {
+                "@type":"Gemeentenaam",
+                "gemeentenaam":
+                {
+                    "@value": "Brugge",
+                    "@language": "nl"
+                }
+            }
+        },
+        "postnaam":
+        [
+            {
+                "@value": "Sint-Andries",
+                "@language": "nl"
+            },
+            {
+                "@value": "Sint-Michiels",
+                "@language": "nl"
+            }
+        ],
+        "status":
+        { 
+            "@id": "https://data.vlaanderen.be/id/concept/adresstatus/gerealiseerd",
+            "@type": "skos:Concept",
+            "skos:prefLabel": "gerealiseerd"
+        },
+        "nuts3":"BE251"
+    },
+
+    "_links":
+    {
+    "@type": "Links",
+    "detailSelf":"https://api.basisregisters.vlaanderen.be/v2/postinfo/8200",
+    "detailAdressen":"https://api.basisregisters.vlaanderen.be/v2/adressen?postcode=8200"
+    }
+}

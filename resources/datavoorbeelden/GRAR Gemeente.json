@@ -3,7 +3,6 @@
     "@context": "example.com",
     "@type": "DataEnvelop",
     "data":
-    [
       {
         "@type":"Gemeente",
         "@id":"https://data.vlaanderen.be/id/gemeente/31005",
@@ -49,8 +48,7 @@
           "skos:prefLabel": "inGebruik"
         }
 
-      }
-    ],
+      },
     "_links":
     {
     "@type": "Links",

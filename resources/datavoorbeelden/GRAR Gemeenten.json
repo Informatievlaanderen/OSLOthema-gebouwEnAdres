@@ -18,6 +18,7 @@
             "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
             "naam":
             {
+                "@type":"Gemeentenaam",
                 "gemeentenaam":
                 {
                     "@value": "Brugge",
@@ -48,6 +49,7 @@
             "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/53084",
             "naam":
             {
+                "@type":"Gemeentenaam",
                 "gemeentenaam":
                 {
                     "@value": "Quévy",
