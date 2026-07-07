@@ -6,7 +6,8 @@
       {
         "@type":"Straatnaam",
         "@id":"https://data.vlaanderen.be/id/straatnaam/12461",
-        "identificator": {
+        "identificator": 
+        {
           "@type":"Identificator",
           "gestructureerdeIdentificator": 
           {
@@ -33,7 +34,7 @@
         },
         "straatnaam":
         {
-           "@value": "Baliestraat",
+            "@value": "Baliestraat",
             "@language": "nl" 
         },
         "status":
