@@ -24,10 +24,10 @@
             {
                 "@type":"Adresuitbreiding",
                 "volledigAdres":
-                {
+                [{
                     "@value": "Teststraat 42 bus 5B, 9000 Gent",
                     "@language": "nl"
-                }
+                }]
             },
             "status":
             { 
@@ -58,10 +58,10 @@
             {
                 "@type":"Adresuitbreiding",
                 "volledigAdres":
-                {
+                [{
                     "@value": "Boudewijnlaan 30 bus 30, 1000 Brussel",
                     "@language": "nl"
-                }
+                }]
             },
             "status":
             { 

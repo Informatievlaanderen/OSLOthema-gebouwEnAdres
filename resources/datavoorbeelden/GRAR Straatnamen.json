@@ -18,10 +18,10 @@
             },
             "detail":"https://api.basisregisters.vlaanderen.be/v2/straatnamen/1000",
             "straatnaam":
-            {
+            [{
                 "@value":"Kerkstraat",
                 "@language":"nl"
-            },
+            }],
             "status":
             { 
                 "@id": "https://data.vlaanderen.be/id/concept/straatnaamstatus/inGebruik",
@@ -45,10 +45,10 @@
             },
             "detail":"https://api.basisregisters.vlaanderen.be/v2/straatnamen/1001",
             "straatnaam":
-            {
+            [{
                 "@value":"Wetstraat",
                 "@language":"nl"
-            },
+            }],
             "homoniemToevoeging":
             {
                 "@value": "BR",

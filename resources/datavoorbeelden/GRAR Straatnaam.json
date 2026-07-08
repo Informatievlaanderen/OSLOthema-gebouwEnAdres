@@ -26,17 +26,17 @@
             {
                 "@type":"Gemeentenaam",
                 "gemeentenaam":
-                {
+                [{
                     "@value": "Brugge",
                     "@language": "nl"
-                }
+                }]
             }
         },
         "straatnaam":
-        {
+        [{
             "@value": "Baliestraat",
             "@language": "nl" 
-        },
+        }],
         "status":
         { 
             "@id": "https://data.vlaanderen.be/id/concept/straatnaamstatus/inGebruik",
@@ -48,7 +48,7 @@
     "_links":
     {
     "@type": "Links",
-    "detailSelf": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/12461",
-    "detailAdressen": "https://api.basisregisters.vlaanderen.be/v2/adressen?straatnaamobjectid=12461"
+    "detailSelf": ["https://api.basisregisters.vlaanderen.be/v2/straatnamen/12461"],
+    "detailAdressen": ["https://api.basisregisters.vlaanderen.be/v2/adressen?straatnaamobjectid=12461"]
     }
 }

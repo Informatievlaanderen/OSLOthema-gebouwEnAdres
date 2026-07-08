@@ -20,11 +20,11 @@
 "heeftGemeentenaam": 
 {
     "@type":"Gemeentenaam",    
-    "gemeentenaam": 
+    "gemeentenaam":[ 
     {
         "@value": "Gent",
         "@language": "nl"
-    },
+    }],
     "isafgeleidVan":{
         "@id":  "https://data.vlaanderen.be/id/gemeente/44021",
         "detail": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/44021"
@@ -46,11 +46,11 @@
     "@type":"Straatnaam",
     "@id": "https://data.vlaanderen.be/id/straatnaam/748",
     "detail": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/748",
-    "straatnaam":
+    "straatnaam":[
     {
         "@value": "Teststraat",
         "@language": "nl"
-    },
+    }],
     "homoniemToevoeging":
     {
         "@value": "UK",
@@ -71,19 +71,24 @@
 {
     "@type":"Adresuitbreiding",
     "volledigAdres":
-    {
+    [{
         "@value": "Teststraat 42 bus 5B, 9000 Gent",
         "@language": "nl"
-    }
+    }]
 },
 "positie":
 {
     "@type":"GeografischePositie",
     "geometrie":
-    {
+    [{
         "@type":"Punt",
         "gml":"<gml:Point srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:pos>140252.76 198794.27</gml:pos></gml:Point>"
-    },
+    },{
+        "@type":"Punt",
+        "gml":"<gml:Point srsName=\"http://www.opengis.net/def/crs/EPSG/0/3812\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:pos>573857.26 711625.49</gml:pos></gml:Point>"
+
+    }
+    ],
     "methode":
     { 
         "@id": "https://data.vlaanderen.be/id/concept/geometriemethode/aangeduidDoorBeheerder",
@@ -109,10 +114,10 @@
 
 "_links":
 {
-    "@type": "Links",
-    "detailSelf":"https://api.basisregisters.vlaanderen.be/v2/adressen/60",
-    "detailGebouweenheden":"https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?adresobjectid=60",
-    "detailPercelen":"https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"       
+    "@type": ["Links"],
+    "detailSelf":["https://api.basisregisters.vlaanderen.be/v2/adressen/60"],
+    "detailGebouweenheden":["https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?adresobjectid=60"],
+    "detailPercelen":["https://api.basisregisters.vlaanderen.be/v2/percelen?adresobjectid=60"]       
 
 } 
 }

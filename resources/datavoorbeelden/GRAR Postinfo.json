@@ -25,10 +25,10 @@
             {
                 "@type":"Gemeentenaam",
                 "gemeentenaam":
-                {
+                [{
                     "@value": "Brugge",
                     "@language": "nl"
-                }
+                }]
             }
         },
         "postnaam":
@@ -54,7 +54,7 @@
     "_links":
     {
     "@type": "Links",
-    "detailSelf":"https://api.basisregisters.vlaanderen.be/v2/postinfo/8200",
-    "detailAdressen":"https://api.basisregisters.vlaanderen.be/v2/adressen?postcode=8200"
+    "detailSelf":["https://api.basisregisters.vlaanderen.be/v2/postinfo/8200"],
+    "detailAdressen":["https://api.basisregisters.vlaanderen.be/v2/adressen?postcode=8200"]
     }
 }

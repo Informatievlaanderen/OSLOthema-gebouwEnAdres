@@ -17,15 +17,15 @@
           }
         },
         "officieleTaal":
-        {
+        [{
           "@type":"Language",
           "@value":"nl"
-        },
+        }],
         "faciliteitenTaal":
-        {
+        [{
           "@type":"Language",
           "@value":"fr"
-        },
+        }],
         "naam":
         {
           "@type":"Gemeentenaam",
@@ -60,9 +60,9 @@
     "_links":
     {
     "@type": "Links",
-    "detailSelf":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
-    "detailStraatnamen": "https://api.basisregisters.vlaanderen.be/v2/straatnamen?niscode=31005",
-    "detailAdressen":"https://api.basisregisters.vlaanderen.be/v2/adressen?niscode=31005",
-    "detailPostinfo":"https://api.basisregisters.vlaanderen.be/v2/postinfo?gemeentenaam=Brugge"
+    "detailSelf":["https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005"],
+    "detailStraatnamen": ["https://api.basisregisters.vlaanderen.be/v2/straatnamen?niscode=31005"],
+    "detailAdressen":["https://api.basisregisters.vlaanderen.be/v2/adressen?niscode=31005"],
+    "detailPostinfo":["https://api.basisregisters.vlaanderen.be/v2/postinfo?gemeentenaam=Brugge"]
     }
 }
