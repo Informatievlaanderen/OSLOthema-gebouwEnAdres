@@ -16,8 +16,16 @@
             "versieIdentificator":"2026-07-06T07:49:53+02:00"
           }
         },
-        "officieleTaal": "nl",
-        "faciliteitenTaal":"fr",
+        "officieleTaal":
+        {
+          "@type":"Language",
+          "@value":"nl"
+        },
+        "faciliteitenTaal":
+        {
+          "@type":"Language",
+          "@value":"fr"
+        },
         "naam":
         {
           "@type":"Gemeentenaam",
