@@ -19,7 +19,7 @@
     "prefix": "grar",
     "type": "voc",
     "eap": "OSLO-Adresregister-implementatiemodel.eap",
-    "diagram": "OSLO-Adresregister-implementatiemodel.eap",
+    "diagram": "GRAR-Adresregister",
     "template": "adres-voc-im.j2",
     "title": "GRAR-Adres Vocabularium",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/Standaard",
