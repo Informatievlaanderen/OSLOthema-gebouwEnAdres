@@ -37,6 +37,11 @@
             "@value": "Baliestraat",
             "@language": "nl" 
         }],
+        "homoniemToevoeging":
+            [{
+                "@value": "BR",
+                "@language": "nl"
+            }],
         "status":
         { 
             "@id": "https://data.vlaanderen.be/id/concept/straatnaamstatus/inGebruik",
