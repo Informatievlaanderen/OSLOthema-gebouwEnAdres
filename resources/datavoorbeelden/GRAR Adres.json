@@ -52,10 +52,10 @@
         "@language": "nl"
     }],
     "homoniemToevoeging":
-    {
+    [{
         "@value": "UK",
         "@language": "nl"
-    }
+    }]
 
 },
 "huisnummer":"42",
