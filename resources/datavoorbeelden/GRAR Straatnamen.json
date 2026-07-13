@@ -50,10 +50,10 @@
                 "@language":"nl"
             }],
             "homoniemToevoeging":
-            {
+            [{
                 "@value": "BR",
                 "@language": "nl"
-            },
+            }],
 
             "status":
             { 
