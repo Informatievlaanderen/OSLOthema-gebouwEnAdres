@@ -1,0 +1,1352 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "GRAR Adres REST",
+    "description": "GRAR OSLO-conforme REST API voor adressen",
+    "version": "3.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://implementatie.data.test-vlaanderen.be/",
+      "description": "Basis URL"
+    }
+  ],
+  "paths": {
+    "/v3/adressen/{id}": {
+      "get": {
+        "summary": "De collectie van de uitgewisselde adressen en metadata elementen.",
+        "operationId": "adressenGET",
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Nulgebaseerde index van de eerste instantie die teruggegeven wordt. De offset is echter beperkt tot 1000000, indien meer data dient ingelezen te worden is het gebruik van extra filters aangewezen op de service of verwijzen we naar de <a href=\"https://basisregisters.vlaanderen.be/producten/grar\" target=\"_blank\">downloadproducten van het gebouwen- en adressenregister</a> (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan default 100 instanties (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "gemeentenaam",
+            "in": "query",
+            "description": "Filter op de gemeentenaam van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "postcode",
+            "in": "query",
+            "description": "Filter op de postcode van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "straatnaam",
+            "in": "query",
+            "description": "Filter op de straatnaam van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "homoniemToevoeging",
+            "in": "query",
+            "description": "Filter op de homoniemtoevoeging van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "huisnummer",
+            "in": "query",
+            "description": "Filter op het huisnummer van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "busnummer",
+            "in": "query",
+            "description": "Filter op het busnummer van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "niscode",
+            "in": "query",
+            "description": "Filter op de NIS-code van het adres (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Filter op de status van het adres (exact) (optioneel). \\\n`\"voorgesteld\"` `\"inGebruik\"` `\"gehistoreerd\"` `\"afgekeurd\"`",
+            "schema": {
+              "type": "string",
+              "pattern": "^https:\\/\\/data\\.vlaanderen\\.be\\/id\\/organisatie\\/OVO\\d{6}$"
+            },
+ 
+            "examples":{
+                "voorgesteld":{
+                    "summary": "Voorgesteld",
+                    "value":"TODO URI"
+                }
+            }
+          },
+          {
+            "name": "straatnaamObjectId",
+            "in": "query",
+            "description": "Filter op de objectidentificator van de gekoppelde straatnaam (exact) (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "if-None-Match",
+            "in": "header",
+            "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "x-api-key header met verkregen API key (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "adressen object gevonden.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/DataEnvelop"
+                }
+              }
+            
+            }
+          },
+          "400": {
+            "description": "Invalid data supplied.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "adressenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "403": {
+            "description": "Authentication failed.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "adressenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "406": {
+            "description": "Not acceptable.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "adressenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "adressenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Server Error.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            },
+            "links": {
+              "Probleemdetail.type": {
+                "operationId": "adressenGET",
+                "parameters": {
+                  "type": "$response.body#/type"
+                },
+                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Locatienaamtype": {
+        "title": "Locatienaamtype",
+        "type": "object",
+        "description": "Aard van de locatienaam.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Locatienaamtype)",
+            "pattern": "^Locatienaamtype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Locatieaanduidingtype": {
+        "title": "Locatieaanduidingtype",
+        "type": "object",
+        "description": "Aard van de locatieaanduiding.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Locatieaanduidingtype)",
+            "pattern": "^Locatieaanduidingtype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Locatorniveauwaarde": {
+        "title": "Locatorniveauwaarde",
+        "type": "object",
+        "description": "Niveau van de adreslocator.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Locatorniveauwaarde)",
+            "pattern": "^Locatorniveauwaarde$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Statuswaarde": {
+        "title": "Statuswaarde",
+        "type": "object",
+        "description": "Mate waarin het adres of de adrescomponent geldig is.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Statuswaarde)",
+            "pattern": "^Statuswaarde$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GeometrieMethodeWaarde": {
+        "title": "GeometrieMethodeWaarde",
+        "type": "object",
+        "description": "De manier waarop het punt werd bepaald.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GeometrieMethodeWaarde)",
+            "pattern": "^GeometrieMethodeWaarde$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GeometriSpecificatieWaarde": {
+        "title": "GeometriSpecificatieWaarde",
+        "type": "object",
+        "description": "Het type object op basis waarvan het punt werd bepaald.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GeometriSpecificatieWaarde)",
+            "pattern": "^GeometriSpecificatieWaarde$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bewerkingstype": {
+        "title": "Bewerkingstype",
+        "type": "object",
+        "description": "Aard vd bewerking die ihkv een activiteit op een entiteit wordt uitgevoerd.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bewerkingstype)",
+            "pattern": "^Bewerkingstype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Postinfo": {
+        "title": "Postinfo",
+        "type": "object",
+        "description": "Adrescomponent die verwijst naar informatie toegekend door de aanbieder van de universele postdienst voor de identificatie van een groepering van adressen in een geografisch gebied voor postale doeleinden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Postinfo)",
+            "pattern": "^Postinfo$"
+          },
+          "postcode": {
+            "type": "object",
+            "description": "Code waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert aanduidt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "postnaam": {
+            "type": "array",
+            "description": "Lijst van GeografischeNaam items.",
+            "items": {
+              "type": "object",
+              "description": "Naam waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert kan worden aangeduid. Typisch de namen van vroegere gemeenten waarmee het gebied samenvalt.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          },
+          "nuts3": {
+            "type": "object",
+            "description": "De bijhorende NUTS 3 code.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/Statuswaarde"
+          },
+          "detail": {
+            "type": "object",
+            "description": "Een bron dat additionele info over het object bevat.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isToegekendAan": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Straatnaam": {
+        "title": "Straatnaam",
+        "type": "object",
+        "description": "Adrescomponent met de naam die officieel werd toegekend aan een straat (baan, doorgang, plein) of aan een gehucht en waaraan adressen kunnen zijn gekoppeld.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Straatnaam)",
+            "pattern": "^Straatnaam$"
+          },
+          "homoniemToevoeging": {
+            "type": "object",
+            "description": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "straatnaam": {
+            "type": "array",
+            "description": "Lijst van GeografischeNaam items.",
+            "items": {
+              "type": "object",
+              "description": "Naam van de straat.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          },
+          "status": {
+            "$ref": "#/components/schemas/Statuswaarde"
+          },
+          "detail": {
+            "type": "object",
+            "description": "Een bron dat additionele info over het object bevat.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "isToegekendDoor": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          }
+        },
+        "required": [
+          "@type",
+          "straatnaam"
+        ]
+      },
+      "Gemeentenaam": {
+        "title": "Gemeentenaam",
+        "type": "object",
+        "description": "Adrescomponent die verwijst naar de naam van een gemeente, het is te zeggen het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Gemeentenaam)",
+            "pattern": "^Gemeentenaam$"
+          },
+          "gemeentenaam": {
+            "type": "array",
+            "description": "Lijst van GeografischeNaam items.",
+            "items": {
+              "type": "object",
+              "description": "Naam van de gemeente.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          },
+          "isAfgeleidVan": {
+            "$ref": "#/components/schemas/Gemeente"
+          }
+        },
+        "required": [
+          "@type",
+          "gemeentenaam"
+        ]
+      },
+      "Adresuitbreiding": {
+        "title": "Adresuitbreiding",
+        "type": "object",
+        "description": "Bijkomende gegevens met betrekking tot het adres.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adresuitbreiding)",
+            "pattern": "^Adresuitbreiding$"
+          },
+          "volledigAdres": {
+            "type": "array",
+            "description": "Lijst van LangString items.",
+            "items": {
+              "type": "object",
+              "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolgen van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Gemeente": {
+        "title": "Gemeente",
+        "type": "object",
+        "description": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Gemeente)",
+            "pattern": "^Gemeente$"
+          },
+          "officieleTaal": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "De officiële talen van de gemeente.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "faciliteitenTaal": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "De faciliteiten talen van de gemeente.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "detail": {
+            "type": "object",
+            "description": "Een bron dat additionele info over het object bevat.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/Statuswaarde"
+          },
+          "naam": {
+            "$ref": "#/components/schemas/Gemeentenaam"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Adres": {
+        "title": "Adres",
+        "type": "object",
+        "description": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid, een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adres)",
+            "pattern": "^Adres$"
+          },
+          "busnummer": {
+            "type": "object",
+            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "huisnummer": {
+            "type": "object",
+            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "officieelToegekend": {
+            "type": "object",
+            "description": "Geeft aan of het adres officieel door de adresbeheerder is toegekend. Een adres is niet-officieel wanneer het bestaan ervan niet gekend was vanuit de administratieve procedures, maar pas nadat nadat het feitelijk is vastgesteld op het terrein.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "detail": {
+            "type": "object",
+            "description": "Een bron dat additionele info over het object bevat.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "positie": {
+            "$ref": "#/components/schemas/GeografischePositie"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Statuswaarde"
+          },
+          "isVerrijktMet": {
+            "$ref": "#/components/schemas/Adresuitbreiding"
+          },
+          "heeftGemeentenaam": {
+            "$ref": "#/components/schemas/Gemeentenaam"
+          },
+          "isToegekendDoor": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "heeftStraatnaam": {
+            "$ref": "#/components/schemas/Straatnaam"
+          },
+          "heeftPostinfo": {
+            "$ref": "#/components/schemas/Postinfo"
+          },
+          "heeftReferentie": {
+            "$ref": "#/components/schemas/Referentie"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "adressen": {
+        "title": "adressen",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde data en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse adressen)",
+            "pattern": "^adressen$"
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          },
+          "@context": {
+            "type": "string",
+            "description": "URI of the JSON-LD versioned context file for this response.",
+            "pattern": "^https:\\/\\/implementatie.data.test-vlaanderen.be\\/\\/doc\\/implementatiemodel\\/grar\\/adres\\/v0.0.1\\/context\\/adres-im.jsonld$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Referentie": {
+        "title": "Referentie",
+        "type": "object",
+        "description": "Een referentie naar aditionele informatie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Referentie)",
+            "pattern": "^Referentie$"
+          },
+          "detail": {
+            "type": "object",
+            "description": "Een bron dat additionele info over het object bevat.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "detail"
+        ]
+      },
+      "Links": {
+        "title": "Links",
+        "type": "object",
+        "description": "Een verzameling van URIs wijzende naar locaties waar info kan gevonden worden over gerelateerde objecten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Links)",
+            "pattern": "^Links$"
+          },
+          "detailPostinfo": {
+            "type": "array",
+            "description": "Lijst van AnyURI items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een locatie waar info kan gevonden worden over gerelateerde postinfo.",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "minItems": 1
+          },
+          "detailSelf": {
+            "type": "array",
+            "description": "Lijst van AnyURI items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een locatie waar info kan gevonden worden over zichzelf.",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "minItems": 1
+          },
+          "detailGebouweenheden": {
+            "type": "array",
+            "description": "Lijst van AnyURI items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een locatie waar info kan gevonden worden over gerelateerde gebouweenheden.",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "minItems": 1
+          },
+          "detailPercelen": {
+            "type": "array",
+            "description": "Lijst van AnyURI items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een locatie waar info kan gevonden worden over gerelateerde percelen.",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "minItems": 1
+          },
+          "detailStraatnamen": {
+            "type": "array",
+            "description": "Lijst van AnyURI items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een locatie waar info kan gevonden worden over gerelateerde straatnamen.",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "minItems": 1
+          },
+          "detailAdressen": {
+            "type": "array",
+            "description": "Lijst van AnyURI items.",
+            "items": {
+              "type": "object",
+              "description": "Een verwijzing naar een locatie waar info kan gevonden worden over gerelateerde adressen.",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GeografischePositie": {
+        "title": "GeografischePositie",
+        "type": "object",
+        "description": "Geografische positie aangegeven door middel van een punt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GeografischePositie)",
+            "pattern": "^GeografischePositie$"
+          },
+          "default": {
+            "type": "object",
+            "description": "Geeft aan of de positie een default positie is. Hieronder wordt de positie verstaan die per default moet worden gebruikt als het object meerdere posities heeft.",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "geometrie": {
+            "type": "array",
+            "description": "Lijst van Punt items.",
+            "items": {
+              "$ref": "#/components/schemas/Punt"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "methode": {
+            "$ref": "#/components/schemas/GeometrieMethodeWaarde"
+          },
+          "specificatie": {
+            "$ref": "#/components/schemas/GeometriSpecificatieWaarde"
+          }
+        },
+        "required": [
+          "@type",
+          "default",
+          "geometrie"
+        ]
+      },
+      "Locatieaanduiding": {
+        "title": "Locatieaanduiding",
+        "type": "object",
+        "description": "Alfanumerieke code die een adreslocator uniek identificeert binnen de straat, administratieve eenheid etc.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Locatieaanduiding)",
+            "pattern": "^Locatieaanduiding$"
+          },
+          "aanduiding": {
+            "type": "object",
+            "description": "Alfanumerieke code waarmee het identificerend deel van een adreslocator wordt aangeduid.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/Locatieaanduidingtype"
+          }
+        },
+        "required": [
+          "@type",
+          "aanduiding",
+          "type"
+        ]
+      },
+      "Locatienaam": {
+        "title": "Locatienaam",
+        "type": "object",
+        "description": "Naam of omschrijving vh het geografisch object dat een adreslocator aanduidt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Locatienaam)",
+            "pattern": "^Locatienaam$"
+          },
+          "naam": {
+            "type": "array",
+            "description": "Lijst van GeografischeNaam items.",
+            "items": {
+              "type": "object",
+              "description": "Naam van het geografisch object.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Locatienaamtype"
+          }
+        },
+        "required": [
+          "@type",
+          "naam",
+          "type"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Informatie gebruikt om een object uniek te identificeren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (inclusief de versie ervan), de string zelf op de eigenlijke identificator.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor": {
+            "type": "object",
+            "description": "Type van de string slaat op het identificatiesysteem (inclusief de versie ervan), de string zelf op de eigenlijke identificator.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendOp": {
+            "type": "object",
+            "description": "Tijdstip waarop de identificator werd uitgegeven.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "gestructureerdeIdentificator": {
+            "$ref": "#/components/schemas/GestructureerdeIdentificator"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GestructureerdeIdentificator": {
+        "title": "GestructureerdeIdentificator",
+        "type": "object",
+        "description": "Identificator van een object opgesplitst in zijn onderdelen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GestructureerdeIdentificator)",
+            "pattern": "^GestructureerdeIdentificator$"
+          },
+          "lokaleIdentificator": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren binnen de naamruimte.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "naamruimte": {
+            "type": "object",
+            "description": "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken. Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijk bv een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bv https://data.vlaanderen.be/id/adres/).",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "versieIdentificator": {
+            "type": "object",
+            "description": "Identificator van de specifieke versie van een object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "lokaleIdentificator",
+          "naamruimte"
+        ]
+      },
+      "Geometrie": {
+        "title": "Geometrie",
+        "type": "object",
+        "description": "Vorm- en positiekenmerken van een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometrie)",
+            "pattern": "^Geometrie$"
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in GML-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in WKT-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Punt": {
+        "title": "Punt",
+        "type": "object",
+        "description": "Een 0-dimensioneel geometrisch object dat een bepaalde locatie in een coördinaatruimte voorstelt. Heeft een x-coördinaat en een y-coördinaat. Kan ook een z-coördinaat (hoogte) en een m-coördinaat (afstand langs een curve) hebben.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Punt)",
+            "pattern": "^Punt$"
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in GML-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in WKT-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    }
+  }
+}
