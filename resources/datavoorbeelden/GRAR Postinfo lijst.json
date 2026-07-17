@@ -1,7 +1,7 @@
 
 {
     "@context": "example.com",
-    "@type": "DataEnvelop",
+    "@type": "PostinfoLijstEnvelop",
     "data":
     [
         {

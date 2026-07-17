@@ -7,6 +7,104 @@
   },
   "components": {
     "schemas": {
+      "Locatienaamtype": {
+        "title": "Locatienaamtype",
+        "type": "object",
+        "description": "Enumeratie van Locatienaamtype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Locatieaanduidingtype": {
+        "title": "Locatieaanduidingtype",
+        "type": "object",
+        "description": "Enumeratie van Locatieaanduidingtype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Locatorniveauwaarde": {
+        "title": "Locatorniveauwaarde",
+        "type": "object",
+        "description": "Enumeratie van Locatorniveauwaarde",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Statuswaarde": {
+        "title": "Statuswaarde",
+        "type": "object",
+        "description": "Enumeratie van Statuswaarde",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "GeometrieMethodeWaarde": {
+        "title": "GeometrieMethodeWaarde",
+        "type": "object",
+        "description": "Enumeratie van GeometrieMethodeWaarde",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "GeometriSpecificatieWaarde": {
+        "title": "GeometriSpecificatieWaarde",
+        "type": "object",
+        "description": "Enumeratie van GeometriSpecificatieWaarde",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Bewerkingstype": {
+        "title": "Bewerkingstype",
+        "type": "object",
+        "description": "Enumeratie van Bewerkingstype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
       "Probleemdetail": {
         "title": "Probleemdetail",
         "type": "object",
@@ -20,54 +118,6 @@
             "type": "string",
             "description": "Object type (klasse Probleemdetail)",
             "pattern": "^Probleemdetail$"
-          },
-          "type": {
-            "type": "object",
-            "description": "Aard van de fout.",
-            "properties": {
-              "@id": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": [
-              "@id"
-            ]
-          },
-          "titel": {
-            "type": "object",
-            "description": "Korte mensleesbare beschrijving van de fout.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
-          },
-          "status": {
-            "type": "object",
-            "description": "HTTP foutcode. Zoals beschreven in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">RFC7231</a>. Bijvoorbeeld: 404 voor \"Not Found\".",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "int64"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Integer$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
           },
           "detail": {
             "type": "object",
@@ -98,125 +148,61 @@
             "required": [
               "@id"
             ]
+          },
+          "status": {
+            "type": "object",
+            "description": "HTTP foutcode. Zoals beschreven in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">RFC7231</a>. Bijvoorbeeld: 404 voor \"Not Found\".",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "int64"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Integer$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "titel": {
+            "type": "object",
+            "description": "Korte mensleesbare beschrijving van de fout.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "type": {
+            "type": "object",
+            "description": "Aard van de fout.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
           }
         },
         "required": [
           "@type",
-          "type",
-          "titel"
+          "titel",
+          "type"
         ]
-      },
-      "Locatienaamtype": {
-        "title": "Locatienaamtype",
-        "type": "object",
-        "description": "Aard van de locatienaam.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Locatienaamtype)",
-            "pattern": "^Locatienaamtype$"
-          }
-        }
-      },
-      "Locatieaanduidingtype": {
-        "title": "Locatieaanduidingtype",
-        "type": "object",
-        "description": "Aard van de locatieaanduiding.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Locatieaanduidingtype)",
-            "pattern": "^Locatieaanduidingtype$"
-          }
-        }
-      },
-      "Locatorniveauwaarde": {
-        "title": "Locatorniveauwaarde",
-        "type": "object",
-        "description": "Niveau van de adreslocator.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Locatorniveauwaarde)",
-            "pattern": "^Locatorniveauwaarde$"
-          }
-        }
-      },
-      "Statuswaarde": {
-        "title": "Statuswaarde",
-        "type": "object",
-        "description": "Mate waarin het adres of de adrescomponent geldig is.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Statuswaarde)",
-            "pattern": "^Statuswaarde$"
-          }
-        }
-      },
-      "GeometrieMethodeWaarde": {
-        "title": "GeometrieMethodeWaarde",
-        "type": "object",
-        "description": "De manier waarop het punt werd bepaald.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse GeometrieMethodeWaarde)",
-            "pattern": "^GeometrieMethodeWaarde$"
-          }
-        }
-      },
-      "GeometriSpecificatieWaarde": {
-        "title": "GeometriSpecificatieWaarde",
-        "type": "object",
-        "description": "Het type object op basis waarvan het punt werd bepaald.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse GeometriSpecificatieWaarde)",
-            "pattern": "^GeometriSpecificatieWaarde$"
-          }
-        }
-      },
-      "Bewerkingstype": {
-        "title": "Bewerkingstype",
-        "type": "object",
-        "description": "Aard vd bewerking die ihkv een activiteit op een entiteit wordt uitgevoerd.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Bewerkingstype)",
-            "pattern": "^Bewerkingstype$"
-          }
-        }
       },
       "Postinfo": {
         "title": "Postinfo",
@@ -320,16 +306,21 @@
             "pattern": "^Straatnaam$"
           },
           "homoniemToevoeging": {
-            "type": "object",
-            "description": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
             },
-            "required": [
-              "@value"
-            ]
+            "minItems": 1
           },
           "straatnaam": {
             "type": "array",
@@ -671,11 +662,6 @@
           },
           "_links": {
             "$ref": "#/components/schemas/Links"
-          },
-          "@context": {
-            "type": "string",
-            "description": "URI of the JSON-LD versioned context file for this response.",
-            "pattern": "^https:\\/\\/implementatie.data.test-vlaanderen.be\\/\\/doc\\/implementatiemodel\\/grar\\/adres\\/v0.0.1\\/context\\/adres-im.jsonld$"
           }
         },
         "required": [
@@ -729,7 +715,7 @@
             "description": "Object type (klasse Links)",
             "pattern": "^Links$"
           },
-          "detailPostinfo": {
+          "postinfo": {
             "type": "array",
             "description": "Lijst van AnyURI items.",
             "items": {
@@ -747,7 +733,7 @@
             },
             "minItems": 1
           },
-          "detailSelf": {
+          "self": {
             "type": "array",
             "description": "Lijst van AnyURI items.",
             "items": {
@@ -765,7 +751,7 @@
             },
             "minItems": 1
           },
-          "detailGebouweenheden": {
+          "gebouweenheden": {
             "type": "array",
             "description": "Lijst van AnyURI items.",
             "items": {
@@ -783,7 +769,7 @@
             },
             "minItems": 1
           },
-          "detailPercelen": {
+          "percelen": {
             "type": "array",
             "description": "Lijst van AnyURI items.",
             "items": {
@@ -801,7 +787,7 @@
             },
             "minItems": 1
           },
-          "detailStraatnamen": {
+          "straatnamen": {
             "type": "array",
             "description": "Lijst van AnyURI items.",
             "items": {
@@ -819,7 +805,7 @@
             },
             "minItems": 1
           },
-          "detailAdressen": {
+          "adressen": {
             "type": "array",
             "description": "Lijst van AnyURI items.",
             "items": {
@@ -934,7 +920,7 @@
       "Locatienaam": {
         "title": "Locatienaam",
         "type": "object",
-        "description": "Naam of omschrijving vh het geografisch object dat een adreslocator aanduidt.",
+        "description": "Naam of omschrijving van het geografisch object dat een adreslocator aanduidt.",
         "properties": {
           "@id": {
             "type": "string",
@@ -1069,7 +1055,7 @@
           },
           "naamruimte": {
             "type": "object",
-            "description": "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken. Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijk bv een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bv https://data.vlaanderen.be/id/adres/).",
+            "description": "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken. Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijkbijvoorbeeldeen uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bijvoorbeeld https://data.vlaanderen.be/id/adres/).",
             "properties": {
               "@value": {
                 "type": "string"

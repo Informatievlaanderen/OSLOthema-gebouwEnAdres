@@ -1,6 +1,6 @@
 {
     "@context": "example.com",
-    "@type": "DataEnvelop",
+    "@type": "PostinfoEnvelop",
     "data":
     {
         "@type":"Postinfo",

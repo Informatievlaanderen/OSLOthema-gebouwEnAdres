@@ -1,7 +1,7 @@
 {
 
     "@context": "example.com",
-    "@type":"DataEnvelop",
+    "@type":"AdresEnvelop",
     "data":{
     "@type": "Adres",
     "@id":"https://data.vlaanderen.be/id/adres/60",
