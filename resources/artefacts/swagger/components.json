@@ -204,6 +204,244 @@
           "type"
         ]
       },
+      "AdresEnvelop": {
+        "title": "AdresEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AdresEnvelop)",
+            "pattern": "^AdresEnvelop$"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Adres"
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type",
+          "data"
+        ]
+      },
+      "DataEnvelop": {
+        "title": "DataEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde data en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DataEnvelop)",
+            "pattern": "^DataEnvelop$"
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AdressenEnvelop": {
+        "title": "AdressenEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde data en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AdressenEnvelop)",
+            "pattern": "^AdressenEnvelop$"
+          },
+          "data": {
+            "type": "array",
+            "description": "Lijst van Adres items.",
+            "items": {
+              "$ref": "#/components/schemas/Adres"
+            },
+            "minItems": 1
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GemeenteEnvelop": {
+        "title": "GemeenteEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GemeenteEnvelop)",
+            "pattern": "^GemeenteEnvelop$"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type",
+          "data"
+        ]
+      },
+      "GemeentenEnvelop": {
+        "title": "GemeentenEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GemeentenEnvelop)",
+            "pattern": "^GemeentenEnvelop$"
+          },
+          "data": {
+            "type": "array",
+            "description": "Lijst van Gemeente items.",
+            "items": {
+              "$ref": "#/components/schemas/Gemeente"
+            },
+            "minItems": 1
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PostinfoEnvelop": {
+        "title": "PostinfoEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PostinfoEnvelop)",
+            "pattern": "^PostinfoEnvelop$"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Postinfo"
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type",
+          "data"
+        ]
+      },
       "Postinfo": {
         "title": "Postinfo",
         "type": "object",
@@ -289,6 +527,88 @@
         },
         "required": [
           "@type"
+        ]
+      },
+      "PostinfoLijstEnvelop": {
+        "title": "PostinfoLijstEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PostinfoLijstEnvelop)",
+            "pattern": "^PostinfoLijstEnvelop$"
+          },
+          "data": {
+            "type": "array",
+            "description": "Lijst van Postinfo items.",
+            "items": {
+              "$ref": "#/components/schemas/Postinfo"
+            },
+            "minItems": 1
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "StraatnaamEnvelop": {
+        "title": "StraatnaamEnvelop",
+        "type": "object",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse StraatnaamEnvelop)",
+            "pattern": "^StraatnaamEnvelop$"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Straatnaam"
+          },
+          "volgende": {
+            "type": "object",
+            "description": "De URL waar de volgende pagina objecten kan gevonden worden.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "_links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        },
+        "required": [
+          "@type",
+          "data"
         ]
       },
       "Straatnaam": {
@@ -633,10 +953,10 @@
           "@type"
         ]
       },
-      "DataEnvelop": {
-        "title": "DataEnvelop",
+      "StraatnaamenEnvelop": {
+        "title": "StraatnaamenEnvelop",
         "type": "object",
-        "description": "De collectie van de uitgewisselde data en zijn metadata elementen.",
+        "description": "De collectie van de uitgewisselde adres en zijn metadata elementen.",
         "properties": {
           "@id": {
             "type": "string",
@@ -644,8 +964,11 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse DataEnvelop)",
-            "pattern": "^DataEnvelop$"
+            "description": "Object type (klasse StraatnaamenEnvelop)",
+            "pattern": "^StraatnaamenEnvelop$"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Straatnaam"
           },
           "volgende": {
             "type": "object",
@@ -665,7 +988,8 @@
           }
         },
         "required": [
-          "@type"
+          "@type",
+          "data"
         ]
       },
       "Referentie": {
@@ -1172,6 +1496,90 @@
       }
     },
     "links": {
+      "AdresEnvelop.data": {
+        "operationId": "AdresEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/AdresEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "AdresEnvelop._links": {
+        "operationId": "AdresEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/AdresEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
+      "DataEnvelop.data": {
+        "operationId": "DataEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/DataEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "DataEnvelop._links": {
+        "operationId": "DataEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/DataEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
+      "AdressenEnvelop.data": {
+        "operationId": "AdressenEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/AdressenEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "AdressenEnvelop._links": {
+        "operationId": "AdressenEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/AdressenEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
+      "GemeenteEnvelop.data": {
+        "operationId": "GemeenteEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/GemeenteEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "GemeenteEnvelop._links": {
+        "operationId": "GemeenteEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/GemeenteEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
+      "GemeentenEnvelop.data": {
+        "operationId": "GemeentenEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/GemeentenEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "GemeentenEnvelop._links": {
+        "operationId": "GemeentenEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/GemeentenEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
+      "PostinfoEnvelop.data": {
+        "operationId": "PostinfoEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/PostinfoEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "PostinfoEnvelop._links": {
+        "operationId": "PostinfoEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/PostinfoEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
       "Postinfo.status": {
         "operationId": "PostinfoGET",
         "parameters": {
@@ -1192,6 +1600,34 @@
           "id": "$response.body#/Postinfo.identificator/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "PostinfoLijstEnvelop.data": {
+        "operationId": "PostinfoLijstEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/PostinfoLijstEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "PostinfoLijstEnvelop._links": {
+        "operationId": "PostinfoLijstEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/PostinfoLijstEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
+      },
+      "StraatnaamEnvelop.data": {
+        "operationId": "StraatnaamEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/StraatnaamEnvelop.data/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "StraatnaamEnvelop._links": {
+        "operationId": "StraatnaamEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/StraatnaamEnvelop._links/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
       },
       "Straatnaam.status": {
         "operationId": "StraatnaamGET",
@@ -1305,17 +1741,17 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
       },
-      "DataEnvelop.data": {
-        "operationId": "DataEnvelopGET",
+      "StraatnaamenEnvelop.data": {
+        "operationId": "StraatnaamenEnvelopGET",
         "parameters": {
-          "id": "$response.body#/DataEnvelop.data/@id"
+          "id": "$response.body#/StraatnaamenEnvelop.data/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
       },
-      "DataEnvelop._links": {
-        "operationId": "DataEnvelopGET",
+      "StraatnaamenEnvelop._links": {
+        "operationId": "StraatnaamenEnvelopGET",
         "parameters": {
-          "id": "$response.body#/DataEnvelop._links/@id"
+          "id": "$response.body#/StraatnaamenEnvelop._links/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Links` op te halen."
       }

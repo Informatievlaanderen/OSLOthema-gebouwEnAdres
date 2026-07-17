@@ -147,7 +147,7 @@
         ],
         "responses": {
           "200": {
-            "description": "adressen object gevonden.",
+            "description": "Als de opvraging van een lijst met adressen gelukt is.",
             "content": {
               "application/ld+json": {
                 "schema": {
@@ -158,97 +158,52 @@
             }
           },
           "400": {
-            "description": "Invalid data supplied.",
+            "description": "Als uw verzoek foutieve data bevat.",
             "content": {
               "application/problem+json": {
                 "schema": {
                   "$ref": "components.json#/components/schemas/Probleemdetail"
                 }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "adressenGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
               }
             }
           },
           "403": {
-            "description": "Authentication failed.",
+            "description": "Als u niet beschikt over de correcte rechten om deze actie uit te voeren.",
             "content": {
               "application/problem+json": {
                 "schema": {
                   "$ref": "components.json#/components/schemas/Probleemdetail"
                 }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "adressenGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
               }
             }
           },
           "406": {
-            "description": "Not acceptable.",
+            "description": "Als het gevraagde formaat niet beschikbaar is.",
             "content": {
               "application/problem+json": {
                 "schema": {
                   "$ref": "components.json#/components/schemas/Probleemdetail"
                 }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "adressenGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
               }
             }
           },
           "429": {
-            "description": "Too many requests.",
+            "description": "Als het aantal requests per seconde de limiet overschreven heeft.",
             "content": {
               "application/problem+json": {
                 "schema": {
                   "$ref": "components.json#/components/schemas/Probleemdetail"
                 }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "adressenGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
               }
             }
           },
           "500": {
-            "description": "Unexpected Server Error.",
+            "description": "Als er een interne fout is opgetreden.",
             "content": {
               "application/problem+json": {
                 "schema": {
                   "$ref": "components.json#/components/schemas/Probleemdetail"
                 }
-              }
-            },
-            "links": {
-              "Probleemdetail.type": {
-                "operationId": "adressenGET",
-                "parameters": {
-                  "type": "$response.body#/type"
-                },
-                "description": "De waarde van het attribuut `type` kan gebruikt worden om het gerefereerde object van het type `ProblemDetails` op te halen."
               }
             }
           }
