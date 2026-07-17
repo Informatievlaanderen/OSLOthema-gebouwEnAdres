@@ -151,7 +151,7 @@
             "content": {
               "application/ld+json": {
                 "schema": {
-                  "$ref": "components.json#/components/schemas/DataEnvelop"
+                  "$ref": "components.json#/components/schemas/AdressenEnvelop"
                 }
               }
             
