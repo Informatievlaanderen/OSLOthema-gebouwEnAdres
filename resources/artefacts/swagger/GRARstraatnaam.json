@@ -1,0 +1,148 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "GRAR Straatnaam REST",
+    "description": "GRAR OSLO-conforme REST API voor adressen",
+    "version": "3.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://implementatie.data.test-vlaanderen.be/",
+      "description": "Basis URL"
+    }
+  ],
+  "paths": {
+    "/v3/straatnamen/{objectId}": {
+      "get": {
+        "tags": [
+          "Straatnamen"
+        ],
+        "summary": "Vraag een straatnaam op (v3).",
+        "operationId": "GetStreetNameV3",
+       "parameters": [
+          {
+            "name": "objectId",
+            "in": "path",
+            "description": "Identificator van de straatnaam.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "if-None-Match",
+            "in": "header",
+            "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "x-api-key header met verkregen API key (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "Als de straatnaam gevonden is.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/StraatnaamEnvelop"
+                }
+              }
+            
+            }
+          },
+          "304": {
+            "description": "Als de straatnaam niet gewijzigd is ten opzicht van uw verzoek.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Als uw verzoek foutieve data bevat.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Als u niet beschikt over de correcte rechten om deze actie uit te voeren.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Als de straatnaam niet gevonden kan worden.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Als het gevraagde formaat niet beschikbaar is.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Als de straatnaam verwijderd is.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Als het aantal requests per seconde de limiet overschreven heeft.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Als er een interne fout is opgetreden.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
