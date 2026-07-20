@@ -28,10 +28,32 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            },
+            "examples": {
+              "Gent": {
+                "summary": "Stad Gent",
+                "value": "44021"
+              },
+              "Antwerpen": {
+                "summary": "Stad Antwerpen",
+                "value": "11002"
+              },
+              "Kortrijk": {
+                "summary": "Stad Kortrijk",
+                "value": "34000"
+              },
+              "Hasselt1": {
+                "summary": "Stad Hasselt (tot 2024)",
+                "value": "71022"
+              },
+              "Hasselt2": {
+                "summary": "Stad Hasselt (vanaf 2025)",
+                "value": "71072"
+              }
             }
           },
           {
-            "name": "if-None-Match",
+            "name": "If-None-Match",
             "in": "header",
             "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
             "schema": {
@@ -39,9 +61,9 @@
             }
           },
           {
-            "name": "x-api-key",
+            "name": "X-Api-Key",
             "in": "header",
-            "description": "x-api-key header met verkregen API key (optioneel).",
+            "description": "X-Api-Key header met verkregen API key (optioneel).",
             "schema": {
               "type": "string"
             }
@@ -129,8 +151,7 @@
                 }
               }
             }
-          }
-          
+          }     
         }
       }
     }
