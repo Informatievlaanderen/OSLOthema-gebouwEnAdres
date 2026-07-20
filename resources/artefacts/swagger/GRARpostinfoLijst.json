@@ -1,0 +1,157 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "GRAR Postinfo REST",
+    "description": "GRAR OSLO-conforme REST API voor adressen",
+    "version": "3.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://implementatie.data.test-vlaanderen.be/",
+      "description": "Basis URL"
+    }
+  ],
+  "paths": {
+    "/v3/postinfo": {
+      "get": {
+        "tags": [
+          "Postinfo"
+        ],
+        "summary": "Vraag een lijst met postinfo over postcodes op (v3).",
+        "operationId": "ListPostalCodesV3",
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Nulgebaseerde index van de eerste instantie die teruggegeven wordt. De offset is echter beperkt tot 1000000, indien meer data dient ingelezen te worden is het gebruik van extra filters aangewezen op de service of verwijzen we naar de <a href=\"https://basisregisters.vlaanderen.be/producten/grar\" target=\"_blank\">downloadproducten van het gebouwen- en adressenregister</a> (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan default 100 instanties (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "gemeentenaam",
+            "in": "query",
+            "description": "Filter op de gemeentenaam van de postcode (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "postnaam",
+            "in": "query",
+            "description": "Filter op de postnaam van de postcode (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nuts3",
+            "in": "query",
+            "description": "Filter op de NUTS3 classificatie gebruikt door Eurostat (exact) (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "heeftGemeente",
+            "in": "query",
+            "description": "Filter of de postcode gekoppeld is aan een gemeente (true/false) (optioneel).",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "if-None-Match",
+            "in": "header",
+            "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "x-api-key header met verkregen API key (optioneel).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Als de opvraging van een lijst met postinfo over postcodes gelukt is.",
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/PostinfoLijstEnvelop"
+                }
+              }
+            
+            }
+          },
+          "400": {
+            "description": "Als uw verzoek foutieve data bevat.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Als u niet beschikt over de correcte rechten om deze actie uit te voeren.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Als het gevraagde formaat niet beschikbaar is.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Als het aantal requests per seconde de limiet overschreven heeft.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Als er een interne fout is opgetreden.",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "components.json#/components/schemas/Probleemdetail"
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
