@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "GRAR Postinfo REST",
-    "description": "GRAR OSLO-conforme REST API voor adressen",
+    "description": "GRAR OSLO-conforme REST API voor postinfo",
     "version": "3.0.0"
   },
   "servers": [
@@ -26,16 +26,22 @@
             "description": "Nulgebaseerde index van de eerste instantie die teruggegeven wordt. De offset is echter beperkt tot 1000000, indien meer data dient ingelezen te worden is het gebruik van extra filters aangewezen op de service of verwijzen we naar de <a href=\"https://basisregisters.vlaanderen.be/producten/grar\" target=\"_blank\">downloadproducten van het gebouwen- en adressenregister</a> (optioneel).",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "minimum": 0,
+              "maximum": 1000000,
+              "default": 0
             }
           },
           {
             "name": "limit",
             "in": "query",
-            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan default 100 instanties (optioneel).",
+            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan er default 100 instanties teruggegeven (optioneel).",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "minimum": 0,
+              "maximum": 500,
+              "default": 100
             }
           },
           {
@@ -57,21 +63,52 @@
           {
             "name": "nuts3",
             "in": "query",
-            "description": "Filter op de NUTS3 classificatie gebruikt door Eurostat (exact) (optioneel).",
+            "description": "Filter op de NUTS3 classificatie gebruikt door Eurostat (exact). De NUTS3 versie steeds de laatste versie. (optioneel). Zie <a href=\"https://ec.europa.eu/eurostat/web/nuts/\" target=\"_blank\">https://ec.europa.eu/eurostat/web/nuts/</a> voor een overzicht van NUTS3 codes.",
             "schema": {
               "type": "string"
+            },
+            "examples":
+            {
+              "ArrondisementAntwerpen": {
+                "summary": "Arrondissement Antwerpen (NUTS3 2024)",
+                "value": "BE211"
+              },
+              "ArrondisementHalle-Vilvoorde": {
+                "summary": "Arrondissement Halle-Vilvoorde (NUTS3 2024)",
+                "value": "BE241"
+              },
+              "ArrondisementKortrijk": {
+                "summary": "Arrondissement Kortrijk (NUTS3 2024)",
+                "value": "BE254"
+              },
+              "ArrondisementHasselt": {
+                "summary": "Arrondissement Hasselt (NUTS3 2024)",
+                "value": "BE224"
+              }
             }
           },
           {
             "name": "heeftGemeente",
             "in": "query",
-            "description": "Filter of de postcode gekoppeld is aan een gemeente (true/false) (optioneel).",
+            "description": "Filter of de postcode gekoppeld is aan een gemeente (optioneel).",
             "schema": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": false
+            },
+            "examples":
+            {
+              "true": {
+                "summary": "Postcodes met een gemeente",
+                "value": true
+              },
+              "false": {
+                "summary": "Postcodes zonder een gemeente",
+                "value": false
+              }
             }
           },
           {
-            "name": "if-None-Match",
+            "name": "If-None-Match",
             "in": "header",
             "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
             "schema": {
@@ -79,9 +116,9 @@
             }
           },
           {
-            "name": "x-api-key",
+            "name": "X-Api-Key",
             "in": "header",
-            "description": "x-api-key header met verkregen API key (optioneel).",
+            "description": "X-Api-Key header met verkregen API key (optioneel).",
             "schema": {
               "type": "string"
             }
@@ -96,7 +133,7 @@
                   "$ref": "components.json#/components/schemas/PostinfoLijstEnvelop"
                 }
               }
-            
+
             }
           },
           "400": {
@@ -149,7 +186,6 @@
               }
             }
           }
-          
         }
       }
     }
