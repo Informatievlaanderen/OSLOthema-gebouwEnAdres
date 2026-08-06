@@ -26,7 +26,22 @@
             "description": "Nulgebaseerde index van de eerste instantie die teruggegeven wordt. De offset is echter beperkt tot 1000000, indien meer data dient ingelezen te worden is het gebruik van extra filters aangewezen op de service of verwijzen we naar de <a href=\"https://basisregisters.vlaanderen.be/producten/grar\" target=\"_blank\">downloadproducten van het gebouwen- en adressenregister</a> (optioneel).",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "minimum": 0,
+              "maximum": 1000000,
+              "default": 0
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan er default 100 instanties teruggegeven (optioneel).",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0,
+              "maximum": 500,
+              "default": 100
             }
           },
           {
@@ -52,7 +67,8 @@
             "description": "Filter op de postcode van het adres (exact) (optioneel).",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "minimum": 0
             }
           },
           {
@@ -98,25 +114,27 @@
           {
             "name": "status",
             "in": "query",
-            "description": "Filter op de status van het adres (exact) (optioneel). \\\n`\"voorgesteld\"` `\"inGebruik\"` `\"gehistoreerd\"` `\"afgekeurd\"`",
+            "description": "Filter op de status van het adres (exact). Wanneer geen status wordt meegegeven worden alle addressen teruggegeven (optioneel).",
             "schema": {
-              "type": "string",
-              "pattern": "^https:\\/\\/data\\.vlaanderen\\.be\\/id\\/concept\\/adressstatus\\.*"
+              "type": "string"
             },
- 
-            "examples":{
-                "voorgesteld":{
-                    "summary": "Voorgesteld",
-                    "value":"https://data.vlaanderen.be/id/concept/adresstatus/voorgesteld"
-                },
-                "gehistoreerd":{
-                  "summary": "gehistoreerd",
-                    "value":"https://data.vlaanderen.be/id/concept/adresstatus/gehistoreerd"
-                },
-                "in gebruik":{
-                  "summary": "in gebruik",
-                    "value":"https://data.vlaanderen.be/id/concept/adresstatus/inGebruik"
-                }
+            "examples": {
+              "inGebruik": {
+                "summary": "Addressen in gebruik",
+                "value": "inGebruik"
+              },
+              "gehistoreerd": {
+                "summary": "Addressen gehistoreerd",
+                "value": "gehistoreerd"
+              },
+              "voorgesteld": {
+                "summary": "Addressen voorgesteld",
+                "value": "voorgesteld"
+              },
+              "afgekeurd": {
+                "summary": "Addressen afgekeurd",
+                "value": "afgekeurd"
+              }
             }
           },
           {
@@ -129,7 +147,7 @@
             }
           },
           {
-            "name": "if-None-Match",
+            "name": "If-None-Match",
             "in": "header",
             "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
             "schema": {
@@ -137,9 +155,9 @@
             }
           },
           {
-            "name": "x-api-key",
+            "name": "X-Api-Key",
             "in": "header",
-            "description": "x-api-key header met verkregen API key (optioneel).",
+            "description": "X-Api-Key header met verkregen API key (optioneel).",
             "schema": {
               "type": "string"
             }
@@ -154,7 +172,7 @@
                   "$ref": "components.json#/components/schemas/AdressenEnvelop"
                 }
               }
-            
+
             }
           },
           "400": {
@@ -207,7 +225,7 @@
               }
             }
           }
-          
+
         }
       }
     }
