@@ -1,0 +1,76 @@
+{
+
+    "@context": "example.com",
+    "@type":"GebouweenheidEnvelop",
+    "data":{
+    "@type": "Gebouweenheid",
+    "@id":"https://data.vlaanderen.be/id/gebouweenheid/6",
+    "identificator": {
+    "@type":"Identificator",
+    "gestructureerdeIdentificator": 
+    {
+        "@type": "GestructureerdeIdentificator",
+        "lokaleIdentificator":"https://data.vlaanderen.be/id/gebouweenheid/6",
+        "naamruimte": "6",
+        "versieIdentificator":"2026-08-07T13:50:55+02:00"
+    }
+    
+    },
+    "positie":{
+        "@type":"GeografischePositie",
+        "geometrie": [
+            {
+            "@type": "Point",
+            "gml": "<gml:Polygon srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:exterior><gml:LinearRing><gml:posList>101673.0 193520.0 101673.0 193585.0 101732.0 193585.0 101673.0 193585.0 101673.0 193520.0</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon>"
+            },
+            {
+            "@type": "Point",
+            "gml": "<gml:Polygon srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:exterior><gml:LinearRing><gml:posList>101673.0 193520.0 101673.0 193585.0 101732.0 193585.0 101673.0 193585.0 101673.0 193520.0</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon>"
+            }],
+        "methode":{ 
+        "@id": "https://data.vlaanderen.be/id/concept/geometriemethode/aangeduidDoorBeheerder",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "aangeduid door beheerder"
+        }
+    
+
+    },
+    "status":{
+        "@id":"https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "gerealiseerd"
+    },
+    "functie":{
+        "@id":"https://data.vlaanderen.be/id/concept/gebouweenheidfunctie/gemeenschappelijkDeel",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "gemeenschappelijk deel"
+    },
+    "isDeelVan":{
+        "@type":"Gebouw",
+        "@id":"https://data.vlaanderen.be/id/gebouw/1",
+        "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouwen/1"
+
+    },
+
+
+
+
+
+
+    
+    "toegekendAdres":[
+        {
+            "@type":"Adres",
+            "@id": "https://data.vlaanderen.be/id/adressen/1",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/1" 
+        },
+         {
+            "@type":"Adres",
+            "@id": "https://data.vlaanderen.be/id/adressen/2",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/2"  
+        }
+    ],
+    "afwijkingVastgesteld": false
+}
+}
+

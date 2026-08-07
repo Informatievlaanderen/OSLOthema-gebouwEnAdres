@@ -1,0 +1,59 @@
+
+{
+    "@context": "example.com",
+    "@type": "GebouweneenhedenEnvelop",
+    "data":
+    [
+        {
+           "@type": "Gebouweneenheid",
+            "@id":"https://data.vlaanderen.be/id/gebouweenheid/6",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"6",
+                    "naamruimte": "https://data.vlaanderen.be/id/gebouweenheid",
+                    "versieIdentificator": "2026-08-07T13:50:55+02:00"
+                }
+    
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/6",
+            
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gepland",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gepland"
+            }
+
+        },
+        {
+          "@type": "Gebouweneenheid",
+            "@id":"https://data.vlaanderen.be/id/gebouweenheid/7",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"7",
+                    "naamruimte": "https://data.vlaanderen.be/id/gebouweenheid",
+                    "versieIdentificator": "2026-08-07T13:50:55+02:00"
+                }
+    
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/7",
+            
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gerealiseerd"
+            } 
+        }
+
+    ],
+    "volgende":"https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?offset=5&limit=10"
+
+}
+
