@@ -1,0 +1,60 @@
+
+{
+    "@context": "example.com",
+    "@type": "GebouwenEnvelop",
+    "data":
+    [
+        {
+           "@type": "Gebouw",
+            "@id":"https://data.vlaanderen.be/id/gebouw/6",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"6",
+                    "naamruimte": "https://data.vlaanderen.be/id/gebouw",
+                    "versieIdentificator": "2026-08-07T13:50:55+02:00"
+                }
+    
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouwen/6",
+            
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/gebouwstatus/gehistoreerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gehistoreerd"
+            }
+
+        },
+        {
+           "@type": "Gebouw",
+            "@id":"https://data.vlaanderen.be/id/gebouw/7",
+            "identificator": {
+                "@type":"Identificator",
+                "gestructureerdeIdentificator": 
+                {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator":"7",
+                    "naamruimte": "https://data.vlaanderen.be/id/gebouw",
+                    "versieIdentificator": "2026-08-07T13:50:55+02:00"
+                }
+    
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouwen/7",
+            
+            "status":
+            { 
+                "@id": "https://data.vlaanderen.be/id/concept/gebouwstatus/gehistoreerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gepland"
+            }
+
+        }
+
+    ],
+    "volgende":"https://api.basisregisters.vlaanderen.be/v2/gebouwen?offset=5&limit=10"
+
+}
+

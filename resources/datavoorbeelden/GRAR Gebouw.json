@@ -1,0 +1,80 @@
+{
+
+    "@context": "example.com",
+    "@type":"GebouwEnvelop",
+    "data":{
+    "@type": "Gebouw",
+    "@id":"https://data.vlaanderen.be/id/gebouw/6",
+    "identificator": {
+    "@type":"Identificator",
+    "gestructureerdeIdentificator": 
+    {
+        "@type": "GestructureerdeIdentificator",
+        "lokaleIdentificator":"6",
+        "naamruimte": "https://data.vlaanderen.be/id/gebouw",
+        "versieIdentificator":"2026-08-07T13:50:55+02:00"
+    }
+    
+    },
+    "geometrie":{
+        "@type":"2DGebouwgeometrie",
+        "geometrie": [
+            {
+            "@type": "Polygoon",
+            "gml": "<gml:Polygon srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:exterior><gml:LinearRing><gml:posList>101673.0 193520.0 101673.0 193585.0 101732.0 193585.0 101673.0 193585.0 101673.0 193520.0</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon>"
+            },
+            {
+            "@type": "Polygoon",
+            "gml": "<gml:Polygon srsName=\"https://www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http://www.opengis.net/gml/3.2\"><gml:exterior><gml:LinearRing><gml:posList>101673.0 193520.0 101673.0 193585.0 101732.0 193585.0 101673.0 193585.0 101673.0 193520.0</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon>"
+            }],
+        "methode":{ 
+        "@id": "https://data.vlaanderen.be/id/concept/2Dgeometriemethode/ingemetenGRB",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "ingemetenGRB"
+        }
+    
+
+    },
+    "status":{
+        "@id":"https://data.vlaanderen.be/id/concept/gebouwstatus/gerealiseerd",
+        "@type": "skos:Concept",
+        "skos:prefLabel": "gerealiseerd"
+    },
+    "bestaatUit":[
+        {
+            "@type":"Gebouweenheid",
+            "@id": "https://data.vlaanderen.be/id/gebouweenheid/1",
+            "status": {
+                "@id":"https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gerealiseerd"
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/1"  
+        },
+         {
+            "@type":"Gebouweenheid",
+            "@id": "https://data.vlaanderen.be/id/gebouweenheid/2",
+            "status": {
+                "@id":"https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+                "@type": "skos:Concept",
+                "skos:prefLabel": "gerealiseerd"
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/2"  
+        }
+    ],
+    "ligtOp":[
+        {
+            "@type":"RuimtelijkeEenheid",
+            "@id":"https://data.vlaanderen.be/id/perceel/11001B0008-00G002",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/percelen/11001B0008-00G002"
+
+        },
+        {
+            "@type":"RuimtelijkeEenheid",
+            "@id":"https://data.vlaanderen.be/id/perceel/11001B0008-00G003",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/percelen/11001B0008-00G003"
+        }
+    ]
+}
+}
+
