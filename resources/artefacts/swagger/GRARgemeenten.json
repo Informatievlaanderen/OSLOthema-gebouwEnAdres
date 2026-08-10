@@ -26,16 +26,22 @@
             "description": "Nulgebaseerde index van de eerste instantie die teruggegeven wordt. De offset is echter beperkt tot 1000000, indien meer data dient ingelezen te worden is het gebruik van extra filters aangewezen op de service of verwijzen we naar de <a href=\"https://basisregisters.vlaanderen.be/producten/grar\" target=\"_blank\">downloadproducten van het gebouwen- en adressenregister</a> (optioneel).",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "minimum": 0,
+              "maximum": 1000000,
+              "default": 0
             }
           },
           {
             "name": "limit",
             "in": "query",
-            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan default 100 instanties (optioneel).",
+            "description": "Aantal instanties dat teruggegeven wordt. Maximaal kunnen er 500 worden teruggegeven. Wanneer limit niet wordt meegegeven dan er default 100 instanties teruggegeven (optioneel).",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "minimum": 0,
+              "maximum": 500,
+              "default": 100
             }
           },
           {
@@ -49,21 +55,42 @@
           {
             "name": "status",
             "in": "query",
-            "description": "Filter op de status van de gemeente (exact) (optioneel). \\\n`\"inGebruik\"` `\"gehistoreerd\"` `\"voorgesteld\"`",
+            "description": "Filter op de status van de gemeente (exact). Wanneer geen status wordt meegegeven worden alle gemeenten teruggegeven (optioneel).",
             "schema": {
               "type": "string"
+            },
+            "examples": {
+              "inGebruik": {
+                "summary": "Gemeenten in gebruik",
+                "value": "inGebruik"
+              },
+              "gehistoreerd": {
+                "summary": "Gemeenten gehistoreerd",
+                "value": "gehistoreerd"
+              },
+              "voorgesteld": {
+                "summary": "Gemeenten voorgesteld",
+                "value": "voorgesteld"
+              }
             }
           },
           {
             "name": "gewest",
             "in": "query",
-            "description": "Filter op het gewest van de gemeente (exact) (optioneel). \\\n            `\"vlaams\"`",
+            "description": "Filter op het gewest van de gemeente (exact) (optioneel). Indien niet meegegeven worden gemeenten in het Vlaams Gewest teruggegeven.",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": "vlaams"
+            },
+            "examples": {
+              "vlaams": {
+                "summary": "Vlaams Gewest",
+                "value": "vlaams"
+              }
             }
           },
           {
-            "name": "if-None-Match",
+            "name": "If-None-Match",
             "in": "header",
             "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
             "schema": {
@@ -71,9 +98,9 @@
             }
           },
           {
-            "name": "x-api-key",
+            "name": "X-Api-Key",
             "in": "header",
-            "description": "x-api-key header met verkregen API key (optioneel).",
+            "description": "X-Api-Key header met verkregen API key (optioneel).",
             "schema": {
               "type": "string"
             }
@@ -88,7 +115,7 @@
                   "$ref": "components.json#/components/schemas/GemeentenEnvelop"
                 }
               }
-            
+
             }
           },
           "400": {
@@ -141,7 +168,7 @@
               }
             }
           }
-          
+
         }
       }
     }

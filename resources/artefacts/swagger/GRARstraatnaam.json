@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "GRAR Straatnaam REST",
-    "description": "GRAR OSLO-conforme REST API voor adressen",
+    "description": "GRAR OSLO-conforme REST API voor straatnamen",
     "version": "3.0.0"
   },
   "servers": [
@@ -31,7 +31,7 @@
             }
           },
           {
-            "name": "if-None-Match",
+            "name": "If-None-Match",
             "in": "header",
             "description": "If-None-Match header met ETag van een vorig verzoek (optioneel).",
             "schema": {
@@ -39,9 +39,9 @@
             }
           },
           {
-            "name": "x-api-key",
+            "name": "X-Api-Key",
             "in": "header",
-            "description": "x-api-key header met verkregen API key (optioneel).",
+            "description": "X-Api-Key header met verkregen API key (optioneel).",
             "schema": {
               "type": "string"
             }
@@ -140,7 +140,6 @@
               }
             }
           }
-          
         }
       }
     }
