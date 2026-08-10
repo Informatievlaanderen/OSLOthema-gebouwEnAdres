@@ -1,6 +1,6 @@
 
 {
-    "@context": "example.com",
+    "@context": "https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/grar/adres/v0.0.1/context/adres-im.jsonld",
     "@type": "AdressenEnvelop",
     "data":
     [
@@ -9,14 +9,14 @@
             "@id":"https://data.vlaanderen.be/id/adres/10521",
             "identificator": {
                 "@type":"Identificator",
-                "gestructureerdeIdentificator": 
+                "gestructureerdeIdentificator":
                 {
                     "@type": "GestructureerdeIdentificator",
                     "lokaleIdentificator":"10521",
                     "naamruimte": "https://data.vlaanderen.be/id/adres",
                     "versieIdentificator":"2026-07-06T07:49:53+02:00"
                 }
-    
+
             },
             "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/10521",
             "huisnummer": "70",
@@ -30,10 +30,11 @@
                 }]
             },
             "status":
-            { 
+            {
                 "@id": "https://data.vlaanderen.be/id/concept/adresstatus/voorgesteld",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "voorgesteld"
+                "@type": "Concept",
+                "code": "voorgesteld",
+                "voorkeursnaam": { "@value": "voorgesteld", "@language": "nl" }
             }
 
         },
@@ -42,14 +43,14 @@
             "@id":"https://data.vlaanderen.be/id/adres/14874",
             "identificator": {
                 "@type":"Identificator",
-                "gestructureerdeIdentificator": 
+                "gestructureerdeIdentificator":
                 {
                     "@type": "GestructureerdeIdentificator",
                     "lokaleIdentificator":"14874",
                     "naamruimte": "https://data.vlaanderen.be/id/adres",
                     "versieIdentificator":"2026-07-04T07:49:53+02:00"
                 }
-    
+
             },
             "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/14874",
             "huisnummer": "70",
@@ -64,10 +65,11 @@
                 }]
             },
             "status":
-            { 
+            {
                 "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
-                "@type": "skos:Concept",
-                "skos:prefLabel": "inGebruik"
+                "@type": "Concept",
+                "code": "inGebruik",
+                "voorkeursnaam": { "@value": "in gebruik", "@language": "nl" }
             }
         }
 
@@ -75,4 +77,3 @@
     "volgende":"https://api.basisregisters.vlaanderen.be/v2/adressen?offset=2&limit=10"
 
 }
-

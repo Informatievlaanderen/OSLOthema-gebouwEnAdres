@@ -1,0 +1,53 @@
+{
+    "@context": "https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/grar/gebouw/v0.0.1/context/gebouw-im.jsonld",
+    "@type": "GebouweenhedenEnvelop",
+    "data": [
+        {
+            "@type": "Gebouweneenheid",
+            "@id": "https://data.vlaanderen.be/id/gebouweenheid/6",
+            "identificator": {
+                "@type": "Identificator",
+                "gestructureerdeIdentificator": {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator": "6",
+                    "naamruimte": "https://data.vlaanderen.be/id/gebouweenheid",
+                    "versieIdentificator": "2026-08-07T13:50:55+02:00"
+                }
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/6",
+            "status": {
+                "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gepland",
+                "@type": "Concept",
+                "code": "gepland",
+                "voorkeursnaam": {
+                    "@value": "gepland",
+                    "@language": "nl"
+                }
+            }
+        },
+        {
+            "@type": "Gebouweneenheid",
+            "@id": "https://data.vlaanderen.be/id/gebouweenheid/7",
+            "identificator": {
+                "@type": "Identificator",
+                "gestructureerdeIdentificator": {
+                    "@type": "GestructureerdeIdentificator",
+                    "lokaleIdentificator": "7",
+                    "naamruimte": "https://data.vlaanderen.be/id/gebouweenheid",
+                    "versieIdentificator": "2026-08-07T13:50:55+02:00"
+                }
+            },
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden/7",
+            "status": {
+                "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
+                "@type": "Concept",
+                "code": "gerealiseerd",
+                "voorkeursnaam": {
+                    "@value": "gerealiseerd",
+                    "@language": "nl"
+                }
+            }
+        }
+    ],
+    "volgende": "https://api.basisregisters.vlaanderen.be/v2/gebouweenheden?offset=5&limit=10"
+}

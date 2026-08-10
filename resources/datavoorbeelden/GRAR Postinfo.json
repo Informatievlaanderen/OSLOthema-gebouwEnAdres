@@ -1,38 +1,33 @@
 {
-    "@context": "example.com",
+    "@context": "https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/grar/adres/v0.0.1/context/adres-im.jsonld",
     "@type": "PostinfoEnvelop",
-    "data":
-    {
-        "@type":"Postinfo",
-        "@id":"https://data.vlaanderen.be/id/postinfo/8200",
-        "identificator": 
-        {
-            "@type":"Identificator",
-            "gestructureerdeIdentificator":
-            {
+    "data": {
+        "@type": "Postinfo",
+        "@id": "https://data.vlaanderen.be/id/postinfo/8200",
+        "identificator": {
+            "@type": "Identificator",
+            "gestructureerdeIdentificator": {
                 "@type": "GestructureerdeIdentificator",
-                "lokaleIdentificator":"8200",
+                "lokaleIdentificator": "8200",
                 "naamruimte": "https://data.vlaanderen.be/id/postinfo",
-                "versieIdentificator":"2026-07-06T07:49:53+02:00"
+                "versieIdentificator": "2026-07-06T07:49:53+02:00"
             }
         },
-        "isToegekendAan":
-        {
-            "@type":"Gemeente",
-            "@id":"https://data.vlaanderen.be/id/gemeente/31005",
-            "detail":"https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
-            "naam":
-            {
-                "@type":"Gemeentenaam",
-                "gemeentenaam":
-                [{
-                    "@value": "Brugge",
-                    "@language": "nl"
-                }]
+        "isToegekendAan": {
+            "@type": "Gemeente",
+            "@id": "https://data.vlaanderen.be/id/gemeente/31005",
+            "detail": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
+            "naam": {
+                "@type": "Gemeentenaam",
+                "gemeentenaam": [
+                    {
+                        "@value": "Brugge",
+                        "@language": "nl"
+                    }
+                ]
             }
         },
-        "postnaam":
-        [
+        "postnaam": [
             {
                 "@value": "Sint-Andries",
                 "@language": "nl"
@@ -42,19 +37,24 @@
                 "@language": "nl"
             }
         ],
-        "status":
-        { 
+        "status": {
             "@id": "https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
-            "@type": "skos:Concept",
-            "skos:prefLabel": "gerealiseerd"
+            "@type": "Concept",
+            "code": "gerealiseerd",
+            "voorkeursnaam": {
+                "@value": "gerealiseerd",
+                "@language": "nl"
+            }
         },
-        "nuts3":"BE251"
+        "nuts3": "BE251"
     },
-
-    "_links":
-    {
-    "@type": "Links",
-    "detailSelf":["https://api.basisregisters.vlaanderen.be/v2/postinfo/8200"],
-    "detailAdressen":["https://api.basisregisters.vlaanderen.be/v2/adressen?postcode=8200"]
+    "_links": {
+        "@type": "Links",
+        "detailSelf": [
+            "https://api.basisregisters.vlaanderen.be/v2/postinfo/8200"
+        ],
+        "detailAdressen": [
+            "https://api.basisregisters.vlaanderen.be/v2/adressen?postcode=8200"
+        ]
     }
 }

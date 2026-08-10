@@ -1,68 +1,74 @@
-
 {
-    "@context": "example.com",
+    "@context": "https://implementatie.data.test-vlaanderen.be/doc/implementatiemodel/grar/adres/v0.0.1/context/adres-im.jsonld",
     "@type": "GemeenteEnvelop",
-    "data":
-      {
-        "@type":"Gemeente",
-        "@id":"https://data.vlaanderen.be/id/gemeente/31005",
+    "data": {
+        "@type": "Gemeente",
+        "@id": "https://data.vlaanderen.be/id/gemeente/31005",
         "identificator": {
-          "@type":"Identificator",
-          "gestructureerdeIdentificator": 
-          {
-            "@type": "GestructureerdeIdentificator",
-            "lokaleIdentificator":"31005",
-            "naamruimte": "https://data.vlaanderen.be/id/gemeente",
-            "versieIdentificator":"2026-07-06T07:49:53+02:00"
-          }
-        },
-        "officieleTaal":
-        [{
-          "@type":"Language",
-          "@value":"nl"
-        }],
-        "faciliteitenTaal":
-        [{
-          "@type":"Language",
-          "@value":"fr"
-        }],
-        "naam":
-        {
-          "@type":"Gemeentenaam",
-          "gemeentenaam":[
-            {
-              "@value": "Brugge",
-              "@language": "nl"
-            },
-            {
-              "@value": "Bruges",
-              "@language": "fr"
-            },
-            {
-              "@value": "Brügge",
-              "@language": "de"
-            },
-            {
-              "@value": "Bruges",
-              "@language": "en"
+            "@type": "Identificator",
+            "gestructureerdeIdentificator": {
+                "@type": "GestructureerdeIdentificator",
+                "lokaleIdentificator": "31005",
+                "naamruimte": "https://data.vlaanderen.be/id/gemeente",
+                "versieIdentificator": "2026-07-06T07:49:53+02:00"
             }
-          ]
-
         },
-        "status":
-        { 
-          "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
-          "@type": "skos:Concept",
-          "skos:prefLabel": "inGebruik"
+        "officieleTaal": [
+            {
+                "@type": "Language",
+                "@value": "nl"
+            }
+        ],
+        "faciliteitenTaal": [
+            {
+                "@type": "Language",
+                "@value": "fr"
+            }
+        ],
+        "naam": {
+            "@type": "Gemeentenaam",
+            "gemeentenaam": [
+                {
+                    "@value": "Brugge",
+                    "@language": "nl"
+                },
+                {
+                    "@value": "Bruges",
+                    "@language": "fr"
+                },
+                {
+                    "@value": "Br\u00fcgge",
+                    "@language": "de"
+                },
+                {
+                    "@value": "Bruges",
+                    "@language": "en"
+                }
+            ]
+        },
+        "status": {
+            "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
+            "@type": "Concept",
+            "code": "inGebruik",
+            "voorkeursnaam": {
+                "@value": "in gebruik",
+                "@language": "nl"
+            }
         }
-
-      },
-    "_links":
-    {
-    "@type": "Links",
-    "detailSelf":["https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005"],
-    "detailStraatnamen": ["https://api.basisregisters.vlaanderen.be/v2/straatnamen?niscode=31005"],
-    "detailAdressen":["https://api.basisregisters.vlaanderen.be/v2/adressen?niscode=31005"],
-    "detailPostinfo":["https://api.basisregisters.vlaanderen.be/v2/postinfo?gemeentenaam=Brugge"]
+    },
+    "_links": {
+        "@type": "Links",
+        "detailSelf": [
+            "https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005"
+        ],
+        "detailStraatnamen": [
+            "https://api.basisregisters.vlaanderen.be/v2/straatnamen?niscode=31005"
+        ],
+        "detailAdressen": [
+            "https://api.basisregisters.vlaanderen.be/v2/adressen?niscode=31005"
+        ],
+        "detailPostinfo": [
+            "https://api.basisregisters.vlaanderen.be/v2/postinfo?gemeentenaam=Brugge"
+        ]
     }
 }
