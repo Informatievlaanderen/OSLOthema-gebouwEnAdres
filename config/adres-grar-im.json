@@ -10,7 +10,7 @@
       "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
       "publication-date": "2026-07-31",
       "contributors-file": "stakeholders.csv",
-      "contributors-column": "Adres",
+      "contributors-column": "IM",
       "site": "site-skeleton/adres-IM",
       "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion"
     },
@@ -25,7 +25,7 @@
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/Standaard",
     "publication-date": "2026-07-31",
     "contributors-file": "stakeholders.csv",
-    "contributors-column": "Adres",
+    "contributors-column": "IM",
     "site": "site-skeleton/adres-IM",
     "feedbackurl": "https://github.com/informatievlaanderen/OSLO-Discussion",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-adres-im/"
