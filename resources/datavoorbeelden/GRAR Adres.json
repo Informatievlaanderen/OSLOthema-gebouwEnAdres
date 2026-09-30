@@ -79,30 +79,18 @@
             "methode": {
                 "@id": "https://data.vlaanderen.be/id/concept/geometriemethode/aangeduidDoorBeheerder",
                 "@type": "Concept",
-                "code": "aangeduidDoorBeheerder",
-                "voorkeursnaam": {
-                    "@value": "aangeduid door beheerder",
-                    "@language": "nl"
-                }
+                "code": "aangeduidDoorBeheerder"
             },
             "specificatie": {
                 "@id": "https://data.vlaanderen.be/id/concept/geometriespecificatie/gebouweenheid",
                 "@type": "Concept",
-                "code": "gebouweenheid",
-                "voorkeursnaam": {
-                    "@value": "gebouweenheid",
-                    "@language": "nl"
-                }
+                "code": "gebouweenheid"
             }
         },
         "status": {
             "@id": "https://data.vlaanderen.be/id/concept/adresstatus/inGebruik",
             "@type": "Concept",
-            "code": "inGebruik",
-            "voorkeursnaam": {
-                "@value": "in gebruik",
-                "@language": "nl"
-            }
+            "code": "inGebruik"
         },
         "officieelToegekend": true
     },
