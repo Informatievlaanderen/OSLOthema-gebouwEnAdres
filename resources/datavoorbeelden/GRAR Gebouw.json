@@ -31,7 +31,7 @@
         "@id": "https://data.vlaanderen.be/id/concept/2Dgeometriemethode/ingemetenGRB",
         "@type": "Concept",
         "code": "ingemetenGRB",
-        "voorkeursnaam": { "@value": "ingemeten GRB", "@value": "nl" }
+        "voorkeursnaam": { "@value": "ingemeten GRB", "@language": "nl" }
         }
 
 
@@ -46,6 +46,7 @@
         {
             "@type":"Gebouweenheid",
             "@id": "https://data.vlaanderen.be/id/gebouweenheid/1",
+            "objectId": "1",
             "status": {
                 "@id":"https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
                 "@type": "Concept",
@@ -57,6 +58,7 @@
          {
             "@type":"Gebouweenheid",
             "@id": "https://data.vlaanderen.be/id/gebouweenheid/2",
+            "objectId": "2",
             "status": {
                 "@id":"https://data.vlaanderen.be/id/concept/gebouweenheidstatus/gerealiseerd",
                 "@type": "Concept",
@@ -70,12 +72,14 @@
         {
             "@type":"RuimtelijkeEenheid",
             "@id":"https://data.vlaanderen.be/id/perceel/11001B0008-00G002",
+            "objectId": "11001B0008-00G002",
             "detail": "https://api.basisregisters.vlaanderen.be/v2/percelen/11001B0008-00G002"
 
         },
         {
             "@type":"RuimtelijkeEenheid",
             "@id":"https://data.vlaanderen.be/id/perceel/11001B0008-00G003",
+            "objectId": "11001B0008-00G003",
             "detail": "https://api.basisregisters.vlaanderen.be/v2/percelen/11001B0008-00G003"
         }
     ]

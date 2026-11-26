@@ -53,17 +53,20 @@
         "isDeelVan": {
             "@type": "Gebouw",
             "@id": "https://data.vlaanderen.be/id/gebouw/1",
+            "objectId": "1",
             "detail": "https://api.basisregisters.vlaanderen.be/v2/gebouwen/1"
         },
         "toegekendAdres": [
             {
                 "@type": "Adres",
                 "@id": "https://data.vlaanderen.be/id/adressen/1",
+                "objectId": "1",
                 "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/1"
             },
             {
                 "@type": "Adres",
                 "@id": "https://data.vlaanderen.be/id/adressen/2",
+                "objectId": "2",
                 "detail": "https://api.basisregisters.vlaanderen.be/v2/adressen/2"
             }
         ],

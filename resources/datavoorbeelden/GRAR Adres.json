@@ -13,7 +13,7 @@
                 "versieIdentificator": "2026-07-06T07:49:53+02:00"
             }
         },
-        "heeftGemeentenaam": {
+        "heeftGemeentenaam":{
             "@type": "Gemeentenaam",
             "gemeentenaam": [
                 {
@@ -23,17 +23,20 @@
             ],
             "isafgeleidVan": {
                 "@id": "https://data.vlaanderen.be/id/gemeente/44021",
+                "objectId": "44021",
                 "detail": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/44021"
             }
         },
         "heeftPostinfo": {
             "@type": "Postinfo",
             "@id": "https://data.vlaanderen.be/id/postinfo/9000",
+            "objectId": "9000",
             "detail": "https://api.basisregisters.vlaanderen.be/v2/postinfo/9000"
         },
         "heeftStraatnaam": {
             "@type": "Straatnaam",
             "@id": "https://data.vlaanderen.be/id/straatnaam/748",
+            "objectId": "748",
             "detail": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/748",
             "straatnaam": [
                 {

@@ -16,6 +16,7 @@
         "isToegekendDoor": {
             "@type": "Gemeente",
             "@id": "https://data.vlaanderen.be/id/gemeente/31005",
+            "objectId": "31005",
             "detail": "https://api.basisregisters.vlaanderen.be/v2/gemeenten/31005",
             "naam": {
                 "@type": "Gemeentenaam",
